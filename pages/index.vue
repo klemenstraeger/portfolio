@@ -60,10 +60,10 @@
           from Dresden. I'm studying at the HTW Dresden and currently working as a working
           student at Energiewerk Ost GmbH.
         </div>
-        <div class="mt-4">
+        <div class="mt-4 flex flex-col md:flex-row">
           <div
             v-for="skill in keySkills"
-            class="mr-2 center relative inline-block select-none whitespace-nowrap bg-gray-900 border-2 rounded-lg py-2 px-3.5 align-baseline mt-3 md:mt-0 text-lg font-bold leading-none text-white hover:translate-y-1"
+            class="mr-2 center relative inline-block select-none whitespace-nowrap bg-gray-900 border-2 rounded-lg py-2 px-3.5 align-baseline mt-3 md:mt-0 text-lg font-bold leading-none text-white hover:translate-y-1 w-max"
             :class="skill.color"
           >
             <div class="mt-px text-sm">{{ skill.title }}</div>
