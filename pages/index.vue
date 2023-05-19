@@ -1,8 +1,8 @@
 <template>
   <div class="container mx-auto">
-    <div class="flex justify-between py-12 items-center">
+    <div class="flex justify-between lg:py-12 py-4 mx-4 lg:mx-0 items-center">
       <div
-        class="font-mono font-bold text-4xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-lime-600 py-2"
+        class="font-mono lg:font-semibold font-bold lg:text-4xl text-transparent text-base bg-clip-text bg-gradient-to-r from-emerald-500 to-lime-600 py-2"
       >
         klemenstraeger.dev
       </div>
@@ -11,7 +11,7 @@
           <Icon
             name="mdi:github"
             color="white"
-            size="3rem"
+            :size="!isSm ? '2rem' : '3rem'"
             class="hover:scale-110 transition duration-150 ease-in-out"
           />
         </NuxtLink>
@@ -22,7 +22,7 @@
           <Icon
             name="mdi:linkedin"
             color="white"
-            size="3rem"
+            :size="!isSm ? '2rem' : '3rem'"
             class="hover:scale-110 transition duration-150 ease-in-out"
           />
         </NuxtLink>
@@ -30,46 +30,50 @@
           <Icon
             name="ci:mail"
             color="white"
-            size="3rem"
+            :size="!isSm ? '2rem' : '3rem'"
             class="hover:scale-110 transition duration-150 ease-in-out"
           />
         </NuxtLink>
       </div>
     </div>
-    <div class="h-[70vh] mt-32 grid grid-cols-2">
-      <div>
-        <div class="text-white font-bold text-6xl flex py-2">
-          <div class="py-4">Hi, I'm &nbsp;</div>
+    <div
+      class="lg:h-[70vh] h-[90vh] lg:mt-32 lg:grid-cols-2 lg:grid mx-4 flex flex-col justify-around"
+    >
+      <div class="h-fit">
+        <div class="text-white font-bold lg:text-6xl flex lg:py-2 text-3xl">
+          <div class="lg:py-4">Hi, I'm&nbsp;</div>
           <div class="w-max">
             <div
-              class="animate-typing whitespace-nowrap border-r-4 border-r-white pr-6 text-transparent bg-clip-text bg-gradient-to-l from-emerald-500 to-lime-600 py-4"
+              class="animate-typing whitespace-nowrap lg:border-r-4 border-r-2 border-r-white lg:pr-6 text-transparent bg-clip-text bg-gradient-to-l from-emerald-500 to-lime-600 lg:py-4"
             >
               Klemens Träger
             </div>
           </div>
         </div>
-        <div class="text-white text-2xl mt-6">
-          I am a
+        <div class="text-white lg:text-2xl text-base mt-6">
+          I am a {{ new Date().getFullYear() - 2000 }} year old
           <span
-            class="bg-gradient-to-r bg-gradient-to-r from-emerald-500 to-lime-600 bg-bottom bg-no-repeat bg-[length:100%_6px] hover:bg-[length:100%_100%] transition-[background-size] w-max"
+            class="bg-gradient-to-r from-emerald-500 to-lime-600 bg-bottom bg-no-repeat bg-[length:100%_6px] hover:bg-[length:100%_100%] transition-[background-size] w-max"
           >
             Business informatics student
           </span>
           from Dresdent with a passion for both front-end and back-end development.
         </div>
       </div>
-      <div class="ml-auto">
+      <div class="lg:ml-auto">
         <img
           src="~/assets/img/headshot.webp"
-          class="rounded-full bg-white"
+          class="rounded-full bg-white w-[80%] mx-auto lg:w-full md:mx-0"
           alt="Discover Nuxt 3"
         />
       </div>
     </div>
     <div class="min-h-[50vh]" id="cv">
       <section>
-        <h3 class="text-5xl text-white font-semibold">Curriculm Vitae</h3>
-        <div class="bg-black text-white py-8">
+        <h3 class="lg:text-5xl text-3xl mx-4 md:mx-0 text-white font-semibold">
+          Curriculm Vitae
+        </h3>
+        <div class="bg-black text-white lg:py-8">
           <div class="container mx-auto">
             <div class="sticky">
               <div class="container mx-auto w-full h-full">
@@ -156,17 +160,19 @@
         </div>
       </section>
     </div>
-    <div class="min-h-[50vh]" id="skills">
-      <div class="ml-auto text-5xl text-white font-semibold">Skills</div>
+    <div class="min-h-[50vh] mx-4 md:mx-0" id="skills">
+      <div class="ml-auto lg:text-5xl text-3xl text-white font-semibold">Skills</div>
 
-      <div class="grid-cols-3 grid gap-6 my-12">
+      <div class="grid gap-6 lg:my-12 my-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
         <div
           class="relative block rounded-b-lg border-t-4 p-4 sm:p-6 lg:p-8 bg-gray-900"
           :class="skill.color"
           v-for="skill in skills"
         >
           <div class="gap-4">
-            <h3 class="text-3xl font-bold text-white sm:text-4xl flex items-center">
+            <h3
+              class="lg:text-3xl text-lg font-bold text-white sm:text-4xl flex items-center"
+            >
               <Icon
                 :name="skill.icon"
                 color="white"
@@ -182,14 +188,16 @@
         </div>
       </div>
     </div>
-    <div class="min-h-[50vh]" id="projects">
-      <div class="ml-auto text-5xl text-white font-semibold">Projects</div>
+    <div class="min-h-[50vh] mx-4 md:mx-0" id="projects">
+      <div class="ml-auto lg:text-5xl text-3xl text-white font-semibold">Projects</div>
     </div>
     <div class="text-white flex py-24 justify-center">Made with ♥️ in Dresden, 2023</div>
   </div>
 </template>
 
 <script setup lang="ts">
+const isSm = useMediaQuery("(min-width: 640px)");
+
 const skills = [
   {
     title: "Vue",

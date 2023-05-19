@@ -1,7 +1,7 @@
 <template>
   <div
     ref="el"
-    class="fixed right-0 top-1/2 h-32 w-6 rounded-md flex flex-col gap-2 justify-center items-center bg-gray-900"
+    class="fixed right-0 z-10 top-1/2 h-28 w-6 rounded-l-md flex flex-col gap-2 justify-center items-center bg-gray-800"
   >
     <a
       v-for="(step, index) in steps"
