@@ -37,7 +37,7 @@
       </div>
     </div>
     <div
-      class="lg:h-[70vh] h-[90vh] lg:mt-32 lg:grid-cols-2 lg:grid mx-4 flex flex-col justify-around"
+      class="lg:h-[70vh] h-[100vh] lg:mt-32 lg:grid-cols-2 lg:grid mx-4 flex flex-col justify-around"
     >
       <div class="h-fit">
         <div class="text-white font-bold lg:text-6xl flex lg:py-2 text-3xl">
@@ -55,20 +55,30 @@
           <span
             class="bg-gradient-to-r from-emerald-500 to-lime-600 bg-bottom bg-no-repeat bg-[length:100%_6px] hover:bg-[length:100%_100%] transition-[background-size] w-max"
           >
-            Business informatics student
+            Business Informatics student
           </span>
-          from Dresdent with a passion for both front-end and back-end development.
+          from Dresden. I'm studying at the HTW Dresden and currently working as a working
+          student at Energiewerk Ost GmbH.
+        </div>
+        <div class="mt-4">
+          <div
+            v-for="skill in keySkills"
+            class="mr-2 center relative inline-block select-none whitespace-nowrap bg-gray-900 border-2 rounded-lg py-2 px-3.5 align-baseline mt-3 md:mt-0 text-lg font-bold leading-none text-white hover:translate-y-1"
+            :class="skill.color"
+          >
+            <div class="mt-px text-sm">{{ skill.title }}</div>
+          </div>
         </div>
       </div>
       <div class="lg:ml-auto">
         <img
           src="~/assets/img/headshot.webp"
-          class="rounded-full bg-white w-[80%] mx-auto lg:w-full md:mx-0"
+          class="rounded-full bg-white w-[70%] mx-auto lg:w-full md:mx-0"
           alt="Discover Nuxt 3"
         />
       </div>
     </div>
-    <div class="min-h-[50vh]" id="cv">
+    <div class="min-h-[50vh] mt-12 md:mt-0" id="cv">
       <section>
         <h3 class="lg:text-5xl text-3xl mx-4 md:mx-0 text-white font-semibold">
           Curriculm Vitae
@@ -161,7 +171,9 @@
       </section>
     </div>
     <div class="min-h-[50vh] mx-4 md:mx-0" id="skills">
-      <div class="ml-auto lg:text-5xl text-3xl text-white font-semibold">Skills</div>
+      <div class="ml-auto lg:text-5xl text-3xl text-white font-semibold">
+        Skills & Technologies
+      </div>
 
       <div class="grid gap-6 lg:my-12 my-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
         <div
@@ -182,9 +194,15 @@
             </h3>
           </div>
 
-          <p class="mt-4 font-medium text-gray-500">
+          <p class="my-2 font-medium text-gray-500">
             {{ skill.text }}
           </p>
+          <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div
+              class="transition-all duration-1000 ease-in-out bg-blue-600 h-2.5 rounded-full"
+              :style="'width:' + skill.skillLevel + '%'"
+            ></div>
+          </div>
         </div>
       </div>
     </div>
@@ -198,61 +216,85 @@
 <script setup lang="ts">
 const isSm = useMediaQuery("(min-width: 640px)");
 
+const keySkills = [
+  {
+    title: "Frontend Development",
+    color: "border-pink-600",
+  },
+  {
+    title: "Backend Development",
+    color: "border-blue-600",
+  },
+  {
+    title: "Cloud Engineering",
+    color: "border-emerald-600",
+  },
+];
+
 const skills = [
   {
     title: "Vue",
     icon: "logos:vue",
-    text: "Advanced knowledge in Git and Github",
+    text: "Go-to Frontend Framework, used in most of my projects",
     color: "border-pink-600",
+    skillLevel: 80,
   },
 
   {
     title: "Nuxt",
     icon: "logos:nuxt-icon",
-    text: "Advanced knowledge in Git and Github",
+    text: "Currently learning and adapting to my projects",
     color: "border-pink-600",
+    skillLevel: 70,
   },
   {
-    title: "Tailwind CSS",
+    title: "TailwindCSS",
     icon: "logos:tailwindcss-icon",
-    text: "Advanced knowledge in Git and Github",
+    text: "Basic knowledge",
     color: "border-pink-600",
+    skillLevel: 60,
   },
   {
     title: "TypeScript ",
     icon: "logos:typescript-icon",
-    text: "Advanced knowledge in Git and Github",
+    text: "Advanced knowledge ",
     color: "border-blue-600",
+    skillLevel: 60,
   },
   {
     title: "Docker ",
     icon: "logos:docker-icon",
-    text: "Advanced knowledge in Git and Github",
+    text: "Basic knowledge",
     color: "border-blue-600",
+    skillLevel: 60,
   },
   {
     title: "NodeJs ",
     icon: "logos:nodejs-icon",
-    text: "Advanced knowledge in Git and Github",
+    text: "Basic knowledge",
     color: "border-blue-600",
+    skillLevel: 50,
   },
   {
-    title: "SQL ",
+    title: "SQL",
     icon: "logos:postgresql",
-    text: "Advanced knowledge in Git and Github",
+    text: "Basic knowledge",
     color: "border-blue-600",
+    skillLevel: 50,
   },
   {
     title: "Google Cloud ",
     icon: "logos:google-cloud",
-    text: "Advanced knowledge in Git and Github",
+    text: "basic knowledge",
     color: "border-blue-600",
+    skillLevel: 50,
   },
   {
     title: "Git",
     icon: "mdi:git",
-    text: "Advanced knowledge in Git and Github",
+    text: "basic knowledge in git and github",
     color: "white",
+    skillLevel: 40,
   },
 ];
 </script>
