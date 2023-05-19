@@ -297,6 +297,17 @@ const skills = [
     skillLevel: 40,
   },
 ];
+
+useHead({
+  title: `klemenstraeger.dev`,
+});
+useServerSeoMeta({
+  title: "klemenstraeger.dev",
+  ogTitle: "klemenstraeger.dev",
+  description: "Portfolio of Klemens Traeger",
+  ogDescription: "Portfolio of Klemens Traeger",
+  ogImage: "img/headshot.webp",
+});
 </script>
 
 <style>

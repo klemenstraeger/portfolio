@@ -26,8 +26,6 @@ const onScroll = useDebounceFn(() => {
     if (el) {
       const rect = el.getBoundingClientRect();
 
-      console.log(rect);
-
       if (rect.top < viewHeight / 2 && rect.bottom > viewHeight / 2) {
         step.isActive = true;
       } else {
