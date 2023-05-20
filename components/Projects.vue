@@ -14,7 +14,7 @@
         </h1>
         <div class="grid md:grid-cols-2">
           <div class="md:w-3/4 w-full">
-            <p class="text-white mt-4 font-semibold text-sm md:text-base">
+            <p class="text-white mt-4 font-normal text-sm md:text-base">
               {{ project.description }}
             </p>
             <div class="flex flex-wrap justify-stretch md:gap-2 mt-4">
@@ -60,7 +60,7 @@ const projects = [
   {
     title: "Trommelhelden DB | 2023",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "During our 7th semester, my fellow students and I embarked on the mandatory project of developing Trommelhelden DB Webfrontend, a comprehensive full-stack web application designed to facilitate CRUD operations. This project provided us the liberty to handpick our technology stack, which created an exciting platform to explore, assimilate, and apply a wide range of technologies. We further enriched the application by incorporating a feature to generate random seed data, enhancing its testing and demonstration capabilities.",
     images: [
       "/img/trommelhelden.png",
       "img/trommelhelden-create-data.png",
@@ -123,9 +123,9 @@ const projects = [
     ],
   },
   {
-    title: "EWO Ads Manager | 2022-2023",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    title: "EWO Ads Manager | 2021-2023",
+    description: `
+EWO Adsmanager is Nuxt 3 web application, which initially started as a Google Apps Script, designed to optimize Google/Bing ads management, reporting, and keyword seeding. At its core, the BudgetManager service facilitates strategic ad budget planning based on seasonal demand and provides key statistics for each budget period. The TrafficReport service delivers insightful data on both paid and organic traffic at link and product group levels. Finally, the KeywordSeeding service auto-generates new negative keywords based on the previous day's search terms, refining ad targeting and boosting campaign performance. `,
     images: [
       "/img/ewo-login.png",
       "/img/ewo-budgetmanager.png",
