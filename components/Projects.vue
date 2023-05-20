@@ -82,14 +82,14 @@ const projects = [
         color: "pink-600",
       },
       {
-        name: "TypeScript",
-        icon: "logos:typescript-icon",
+        name: "PrimeVue",
+        icon: "prime:prime",
         color: "pink-600",
       },
       {
-        name: "ExpressJs",
-        icon: "simple-icons:express",
-        color: "blue-600",
+        name: "TypeScript",
+        icon: "logos:typescript-icon",
+        color: "pink-600",
       },
 
       {
@@ -100,6 +100,11 @@ const projects = [
       {
         name: "MSSQL",
         icon: "simple-icons:microsoftsqlserver",
+        color: "blue-600",
+      },
+      {
+        name: "Express",
+        icon: "simple-icons:express",
         color: "blue-600",
       },
       {
