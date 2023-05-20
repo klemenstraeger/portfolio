@@ -1,10 +1,10 @@
 <template>
-  <div class="min-h-[50vh] mt-12 md:mt-0 mb-8" id="cv">
+  <div class="min-h-[50vh] mt-12 md:mt-0" id="cv">
     <section>
       <h3 class="lg:text-5xl text-3xl mx-4 mb-4 md:mx-0 text-white font-semibold">
         Curriculum Vitae
       </h3>
-      <div class="bg-black text-white lg:py-8">
+      <div class="text-white lg:py-8">
         <div class="container mx-auto">
           <div class="sticky">
             <div class="container mx-auto w-full h-full">

@@ -36,16 +36,18 @@
         </div>
       </div>
       <div class="lg:ml-auto">
-        <img
-          src="~/assets/img/headshot.webp"
-          class="rounded-full bg-white w-[70%] mx-auto lg:w-full md:mx-0"
+        <nuxt-img
+          src="/img/headshot.webp"
+          class="rounded-full bg-white w-[70%] mx-auto lg:w-full md:mx-0 transition duration-300 ease-in-out hover:scale-110"
           alt="Discover Nuxt 3"
         />
       </div>
     </div>
-    <CurriculiumVitae />
-    <SkillsAndTechnologies />
-    <Projects />
+    <div class="flex flex-col gap-y-32">
+      <CurriculiumVitae />
+      <SkillsAndTechnologies />
+      <Projects />
+    </div>
     <TheFooter />
   </div>
 </template>

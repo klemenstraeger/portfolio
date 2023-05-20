@@ -1,10 +1,10 @@
 <template>
   <div class="min-h-[50vh] mx-4 md:mx-0" id="skills">
-    <div class="ml-auto lg:text-5xl text-3xl text-white font-semibold">
+    <h1 class="ml-auto lg:text-5xl text-3xl text-white font-semibold mb-12">
       Skills & Technologies
-    </div>
+    </h1>
 
-    <div class="grid gap-6 lg:my-12 my-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+    <div class="grid gap-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
       <div
         class="relative block rounded-b-lg border-t-4 p-4 sm:p-6 lg:p-8 bg-gray-900 hover:scale-105 transition-transform duration-500 ease-in-out"
         :class="'border-' + skill.color"

@@ -1,15 +1,15 @@
 <template>
   <div class="min-h-[50vh] mx-4 md:mx-0" id="projects">
-    <div class="ml-auto lg:text-5xl text-3xl text-white font-semibold">Projects</div>
+    <div class="ml-auto lg:text-5xl mb-12 text-3xl text-white font-semibold">
+      Projects
+    </div>
 
-    <div class="flex flex-col gap-12 mt-4">
+    <div class="flex flex-col gap-12">
       <div
         class="relative block rounded-lg p-4 sm:p-6 lg:p-8 bg-gray-900"
         v-for="project in projects"
       >
-        <h1
-          class="text-transparent bg-clip-text bg-gradient-to-l from-emerald-500 to-lime-600 text-xl md:text-3xl font-extrabold text-transparent"
-        >
+        <h1 class="text-emerald-500 text-xl md:text-3xl font-extrabold">
           {{ project.title }}
         </h1>
         <div class="grid md:grid-cols-2">
@@ -40,9 +40,12 @@
             class="rounded-md img-carousel"
             keyboard
           >
-            <img
+            <nuxt-img
+              :alt="project.title"
+              format="webp"
               v-for="img in project.images"
-              class="md:w-full object-cover md:h-[400px] mt-4 rounded-md"
+              class="md:w-full md:h-[400px] mt-4 rounded-md"
+              fit="cover"
               :src="img"
             />
           </n-carousel>
