@@ -32,7 +32,6 @@
           </div>
           <n-carousel
             dot-placement="bottom"
-            :centered-slides="true"
             show-arrow
             draggable
             autoplay
@@ -43,9 +42,10 @@
             <nuxt-img
               :alt="project.title"
               format="webp"
+              loading="lazy"
+              quality="100"
               v-for="img in project.images"
-              class="md:w-full md:h-[400px] mt-4 rounded-md"
-              fit="cover"
+              class="mt-4 rounded-md !w-full h-[400px] object-cover"
               :src="img"
             />
           </n-carousel>
