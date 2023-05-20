@@ -14,7 +14,7 @@
         </h1>
         <div class="grid md:grid-cols-2">
           <div class="md:w-3/4 w-full">
-            <p class="text-white mt-4 font-normal text-sm md:text-base">
+            <p class="text-white mt-4 font-normal text-sm md:text-base text-left">
               {{ project.description }}
             </p>
             <div class="flex flex-wrap justify-stretch md:gap-2 mt-4">
@@ -45,7 +45,7 @@
               loading="lazy"
               quality="100"
               v-for="img in project.images"
-              class="mt-4 rounded-md !w-full h-[400px] object-cover"
+              class="mt-4 rounded-md !w-full md:h-[400px] object-cover"
               :src="img"
             />
           </n-carousel>
