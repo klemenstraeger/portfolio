@@ -299,8 +299,9 @@ const skills = [
 ];
 
 useHead({
-  title: `klemenstraeger.dev`,
+  title: `klemenstraeger.dev `,
 });
+
 useServerSeoMeta({
   title: "klemenstraeger.dev",
   ogTitle: "klemenstraeger.dev",
