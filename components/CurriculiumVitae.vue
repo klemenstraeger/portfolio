@@ -1,22 +1,21 @@
 <template>
-  <div class="min-h-[50vh] mt-12 md:mt-0" id="cv">
+  <div class="min-h-[50vh] mt-12 md:mt-0 mb-8" id="cv">
     <section>
-      <h3 class="lg:text-5xl text-3xl mx-4 md:mx-0 text-white font-semibold">
-        Curriculm Vitae
+      <h3 class="lg:text-5xl text-3xl mx-4 mb-4 md:mx-0 text-white font-semibold">
+        Curriculum Vitae
       </h3>
       <div class="bg-black text-white lg:py-8">
         <div class="container mx-auto">
           <div class="sticky">
             <div class="container mx-auto w-full h-full">
-              <div class="relative wrap overflow-hidden h-full">
+              <div class="relative wrap overflow-hidden h-full px-4 md:px-0">
                 <div
-                  class="border-2 rounded-lg absolute h-full border-emerald-500 border-solid left-2/4"
+                  class="border-2 rounded-lg absolute h-full border-emerald-500 border-solid left-2/4 -z-10 md:flex"
                 ></div>
-
                 <div
-                  class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+                  class="mb-8 md:flex justify-between flex-row-reverse items-center w-full left-timeline"
                 >
-                  <div class="order-1 w-5/12"></div>
+                  <div class="order-1 w-5/12 hidden md:block"></div>
                   <CVEntry
                     timeFrame="08/2010 - 06/2018"
                     title="High school diploma"
@@ -26,7 +25,7 @@
                 </div>
 
                 <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                  <div class="order-1 w-5/12"></div>
+                  <div class="order-1 w-5/12 hidden md:block"></div>
                   <CVEntry
                     timeFrame="10/2018 - 02/2019"
                     title="Gap Year, Work and Travel"
@@ -37,7 +36,7 @@
                 <div
                   class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
                 >
-                  <div class="order-1 w-5/12"></div>
+                  <div class="order-1 w-5/12 hidden md:block"></div>
                   <CVEntry
                     timeFrame="05/2019 - now"
                     title="Working student"
@@ -51,7 +50,7 @@
                 </div>
 
                 <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                  <div class="order-1 w-5/12"></div>
+                  <div class="order-1 w-5/12 hidden md:block"></div>
 
                   <CVEntry
                     timeFrame="10/2019 - now"
@@ -61,9 +60,9 @@
                   />
                 </div>
                 <div
-                  class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+                  class="flex justify-between flex-row-reverse items-center w-full left-timeline"
                 >
-                  <div class="order-1 w-5/12"></div>
+                  <div class="order-1 w-5/12 hidden md:block"></div>
                   <CVEntry
                     ref="fooRef"
                     timeFrame="09/2021 - 02/2022"

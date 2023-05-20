@@ -92,14 +92,14 @@ const skills = [
   {
     title: "Google Cloud ",
     icon: "logos:google-cloud",
-    text: "basic knowledge",
+    text: "Basic knowledge",
     color: "blue-600",
     skillLevel: 50,
   },
   {
     title: "Git",
     icon: "mdi:git",
-    text: "basic knowledge in git and github",
+    text: "Basic knowledge in Git and Github",
     color: "white",
     skillLevel: 40,
   },

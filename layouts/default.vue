@@ -1,5 +1,6 @@
 <template>
   <div class="bg-black">
+    <n-back-top />
     <TheNavigation />
     <slot></slot>
   </div>
