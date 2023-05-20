@@ -6,5 +6,6 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@bg-dev/nuxt-naiveui",
     "@nuxt/image-edge",
+    "@nuxtjs/robots",
   ],
 });
