@@ -28,7 +28,7 @@
         <div class="mt-4 flex flex-col md:flex-row">
           <div
             v-for="skill in keySkills"
-            class="mr-2 center relative inline-block select-none whitespace-nowrap bg-gray-900 border-2 rounded-lg py-2 px-3.5 align-baseline mt-3 md:mt-0 text-lg font-bold leading-none text-white hover:translate-y-1 w-max transition duration-150 ease-in-out"
+            class="mr-2 center relative inline-block select-none whitespace-nowrap bg-gray-900 border-2 rounded-lg py-2 px-3.5 align-baseline mt-3 md:mt-0 text-lg font-semibold leading-none text-white hover:-translate-y-1 w-max transition duration-150 ease-in-out"
             :class="skill.color"
           >
             <div class="mt-px text-sm">{{ skill.title }}</div>

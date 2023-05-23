@@ -92,7 +92,7 @@ const projects = [
       {
         name: "TypeScript",
         icon: "logos:typescript-icon",
-        color: "pink-600",
+        color: "blue-600",
       },
 
       {
@@ -113,19 +113,19 @@ const projects = [
       {
         name: "Docker",
         icon: "logos:docker-icon",
-        color: "white",
+        color: "blue-600",
       },
       {
         name: "NGINX",
         icon: "logos:nginx",
-        color: "white",
+        color: "blue-600",
       },
     ],
   },
   {
     title: "EWO Ads Manager | 2021-2023",
     description: `
-EWO Adsmanager is a Nuxt 3 web application, which initially started as a Google Apps Script, designed to optimize Google/Bing ads management, reporting, and keyword seeding. At its core, the BudgetManager service facilitates strategic ad budget planning based on seasonal demand and provides key statistics for each budget period. The TrafficReport service delivers insightful data on both paid and organic traffic at link and product group levels. Finally, the KeywordSeeding service auto-generates new negative keywords based on the previous day's search terms, refining ad targeting and boosting campaign performance. `,
+EWO Adsmanager is a Nuxt 3 web application, which initially started as a Google Apps Script, designed to optimize Google/Bing ads management, reporting, and keyword seeding. At its core, the BudgetManager service facilitates strategic ad budget planning based on seasonal demand and provides key statistics for each budget period. The TrafficReport service delivers insightful data on both paid and organic traffic at link and product group levels. Finally, the KeywordSeeding service generates new negative keywords based on the previous day's search terms, refining ad targeting and boosting campaign performance. `,
     images: [
       "/img/ewo-login.png",
       "/img/ewo-budgetmanager.png",
@@ -166,22 +166,22 @@ EWO Adsmanager is a Nuxt 3 web application, which initially started as a Google 
       {
         name: "Docker",
         icon: "logos:docker-icon",
-        color: "white",
+        color: "blue-600",
       },
       {
         name: "Google Ads",
         icon: "logos:google-ads",
-        color: "white",
+        color: "blue-600",
       },
       {
         name: "Bing Ads",
         icon: "logos:bing",
-        color: "white",
+        color: "blue-600",
       },
       {
         name: "Google Cloud",
         icon: "logos:google-cloud",
-        color: "white",
+        color: "emerald-600",
       },
     ],
   },
