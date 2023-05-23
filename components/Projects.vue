@@ -125,7 +125,7 @@ const projects = [
   {
     title: "EWO Ads Manager | 2021-2023",
     description: `
-EWO Adsmanager is Nuxt 3 web application, which initially started as a Google Apps Script, designed to optimize Google/Bing ads management, reporting, and keyword seeding. At its core, the BudgetManager service facilitates strategic ad budget planning based on seasonal demand and provides key statistics for each budget period. The TrafficReport service delivers insightful data on both paid and organic traffic at link and product group levels. Finally, the KeywordSeeding service auto-generates new negative keywords based on the previous day's search terms, refining ad targeting and boosting campaign performance. `,
+EWO Adsmanager is a Nuxt 3 web application, which initially started as a Google Apps Script, designed to optimize Google/Bing ads management, reporting, and keyword seeding. At its core, the BudgetManager service facilitates strategic ad budget planning based on seasonal demand and provides key statistics for each budget period. The TrafficReport service delivers insightful data on both paid and organic traffic at link and product group levels. Finally, the KeywordSeeding service auto-generates new negative keywords based on the previous day's search terms, refining ad targeting and boosting campaign performance. `,
     images: [
       "/img/ewo-login.png",
       "/img/ewo-budgetmanager.png",
