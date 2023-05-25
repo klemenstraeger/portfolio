@@ -63,7 +63,7 @@ const keySkills = [
     color: "border-blue-600",
   },
   {
-    title: "Cloud Engineering",
+    title: "Fullstack Development",
     color: "border-emerald-600",
   },
 ];
