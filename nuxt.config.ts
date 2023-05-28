@@ -8,4 +8,10 @@ export default defineNuxtConfig({
     "@nuxt/image-edge",
     "@nuxtjs/robots",
   ],
+  nitro: {
+    preset: "vercel-edge",
+    prerender: {
+      crawlLinks: true,
+    },
+  },
 });
