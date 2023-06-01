@@ -38,7 +38,7 @@
                 >
                   <div class="order-1 w-5/12 hidden md:block"></div>
                   <CVEntry
-                    timeFrame="05/2019 - now"
+                    timeFrame="05/2019 - 09/2021"
                     title="Working student"
                     text="Energiewerk Ost GmbH <br>
                     • Google & Bing Ads scripts & management<br>
