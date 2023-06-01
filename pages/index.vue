@@ -22,8 +22,7 @@
           >
             Business Informatics student
           </span>
-          from Dresden. I'm studying at the HTW Dresden and currently working as a working
-          student at Energiewerk Ost GmbH.
+          studying at the Hochschule für Technik und Wirtschaft (HTW) in Dresden.
         </div>
         <div class="mt-4 flex flex-col md:flex-row">
           <div

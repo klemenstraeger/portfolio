@@ -10,7 +10,7 @@
         <Icon
           name="mdi:github"
           color="white"
-          :size="!isSm ? '2rem' : '3rem'"
+          :size="!isSm ? '2rem' : '2.5rem'"
           class="hover:scale-110 transition duration-150 ease-in-out"
         />
       </NuxtLink>
@@ -21,7 +21,7 @@
         <Icon
           name="mdi:linkedin"
           color="white"
-          :size="!isSm ? '2rem' : '3rem'"
+          :size="!isSm ? '2rem' : '2.5rem'"
           class="hover:scale-110 transition duration-150 ease-in-out"
         />
       </NuxtLink>
@@ -29,7 +29,7 @@
         <Icon
           name="ci:mail"
           color="white"
-          :size="!isSm ? '2rem' : '3rem'"
+          :size="!isSm ? '2rem' : '2.5rem'"
           class="hover:scale-110 transition duration-150 ease-in-out"
         />
       </NuxtLink>
