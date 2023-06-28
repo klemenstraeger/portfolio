@@ -37,7 +37,7 @@
       <div class="lg:ml-auto">
         <nuxt-img
           src="/img/headshot.webp"
-          class="rounded-full bg-white w-[70%] mx-auto lg:w-full md:mx-0 transition duration-300 ease-in-out hover:scale-110"
+          class="rounded-full bg-white w-[70%] mx-auto lg:w-full md:mx-0"
           alt="Discover Nuxt 3"
         />
       </div>
