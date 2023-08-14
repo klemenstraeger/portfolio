@@ -72,7 +72,21 @@
 • Internal tools development with Vue.js and PHP"
                     icon="ion:layers"
                   />
+
                 </div>
+                
+        <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                  <div class="order-1 w-5/12 hidden md:block"></div>
+
+                  <CVEntry
+                    timeFrame="08/2023 - now"
+                    title="Software Developer (Working Student)"
+                    text="Otto Group Solution Provider Dresden"
+                    icon="material-symbols:work-outline"
+                  />
+                </div>
+
+
               </div>
             </div>
           </div>
