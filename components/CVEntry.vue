@@ -1,6 +1,6 @@
 <template>
   <div
-    class="order-1 w-full md:w-5/12 px-4 py-4 text-left rounded-b-lg border-t-emerald-600 border-t-4 p-4 sm:p-6 lg:p-8 bg-gray-900"
+    class="order-1 w-full md:w-5/12 px-4 py-4 text-left rounded-b-lg border-t-emerald-600 border-t-4 p-4 sm:p-6 lg:p-8 bg-gray-900 z-20"
   >
     <div class="group relative">
       <div class="flex justify-between items-center mb-3">
