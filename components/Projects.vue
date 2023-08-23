@@ -186,6 +186,7 @@ EWO Adsmanager is a Nuxt 3 web application, which initially started as a Google 
     ],
   },
 ];
+const test = "test";
 </script>
 
 <style>
