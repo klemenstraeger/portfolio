@@ -2,7 +2,7 @@
   <div class="container mx-auto">
     <TheHeader />
     <div
-      class="lg:h-[70vh] h-[100vh] lg:mt-32 lg:grid-cols-2 lg:grid mx-4 flex flex-col justify-around"
+      class="h-[70vh] gap-y-10 mt-12 lg:mt-32 lg:grid-cols-2 lg:grid mx-4 flex flex-col justify-around"
     >
       <div class="h-fit">
         <div class="text-white font-bold lg:text-6xl flex lg:py-2 text-3xl">
