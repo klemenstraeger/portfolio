@@ -15,7 +15,7 @@
         />
       </NuxtLink>
       <NuxtLink
-        to="https://www.linkedin.com/in/klemens-tr%C3%A4ger-003b68198/"
+        to="https://www.linkedin.com/in/klemens-traeger"
         target="_blank"
       >
         <Icon
