@@ -9,18 +9,20 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@bg-dev/nuxt-naiveui": "^1.1.1",
-    "@nuxt/image-edge": "1.0.0-28059208.2abef1b",
-    "@nuxtjs/tailwindcss": "^6.7.0",
-    "@types/node": "^18",
-    "@vueuse/core": "^10.1.2",
-    "@vueuse/nuxt": "^10.1.2",
-    "nuxt": "^3.5.0",
-    "nuxt-icon": "^0.4.1"
+    "@bg-dev/nuxt-naiveui": "^1.4.6",
+    "@nuxt/devtools": "^0.8.4",
+    "@nuxt/image-edge": "1.0.0-rc.2-28252196.34e7c67",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@types/node": "^20.6.3",
+    "@vueuse/core": "^10.4.1",
+    "@vueuse/nuxt": "^10.4.1",
+    "nuxt": "^3.7.3",
+    "nuxt-headlessui": "^1.1.4",
+    "nuxt-icon": "^0.5.0"
   },
   "dependencies": {
     "@nuxtjs/robots": "^3.0.0",
-    "@vercel/analytics": "^1.0.1",
-    "tailwindcss": "^3.3.2"
+    "@vercel/analytics": "^1.0.2",
+    "tailwindcss": "^3.3.3"
   }
 }

@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@bg-dev/nuxt-naiveui",
     "@nuxt/image-edge",
     "@nuxtjs/robots",
+    "nuxt-headlessui",
   ],
   nitro: {
     preset: "vercel-edge",

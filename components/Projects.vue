@@ -18,16 +18,13 @@
               {{ project.description }}
             </p>
             <div class="flex flex-wrap justify-stretch md:gap-3 mt-4">
-              <div
+              <Tag
+                :icon="technologie.icon"
+                :color="technologie.color"
                 v-for="technologie in project.usedTechnologies"
-                class="mr-2 center relative inline-block select-none whitespace-nowrap bg-gray-900 border-2 rounded-lg py-2 px-3.5 align-baseline mt-3 md:mt-0 text-lg font-bold leading-none text-white hover:translate-y-1 w-max transition duration-150 ease-in-out"
-                :class="'border-' + technologie.color"
               >
-                <div class="mt-px md:text-base text-sm flex items-center gap-2">
-                  <Icon :name="technologie.icon"></Icon>
-                  {{ technologie.name }}
-                </div>
-              </div>
+                {{ technologie.name }}</Tag
+              >
             </div>
           </div>
           <n-carousel
