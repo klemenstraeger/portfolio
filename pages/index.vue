@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-[70vh] gap-y-10 mt-12 lg:mt-32 lg:grid-cols-2 lg:grid mx-4 flex flex-col justify-around"
+    class="h-[80vh] gap-y-10 mt-12 lg:mt-32 lg:grid-cols-2 lg:grid mx-4 flex flex-col justify-around"
   >
     <div class="h-fit">
       <div class="text-white font-bold lg:text-6xl flex lg:py-2 text-3xl">
@@ -13,23 +13,34 @@
           </div>
         </div>
       </div>
-      <div class="text-white lg:text-2xl text-base mt-6">
+      <div class="text-white lg:text-2xl text-base font-normal mt-6 text-justify">
         I am a {{ new Date().getFullYear() - 2000 }} year old
         <span
-          class="bg-gradient-to-r from-emerald-500 to-lime-600 bg-bottom bg-no-repeat bg-[length:100%_6px] hover:bg-[length:100%_100%] transition-[background-size] w-max"
+          class="bg-gradient-to-r from-emerald-500 to-lime-600 bg-bottom bg-no-repeat bg-[length:100%_4px] hover:bg-[length:100%_100%] transition-[background-size] w-max"
         >
           Business Informatics student
         </span>
         studying at the Hochschule für Technik und Wirtschaft (HTW) in Dresden.
       </div>
-      <div class="mt-4 flex flex-col md:flex-row">
-        <Tag v-for="skill in keySkills" :color="skill.color">{{ skill.title }}</Tag>
+      <div class="mt-8 flex flex-col items-center md:flex-row" :key="active">
+        <Tag
+          class="lg:hidden animate-jump animate-ease-in"
+          :border-color="keySkills[active].color"
+          >{{ keySkills[active].title }}</Tag
+        >
+        <Tag
+          class="hidden lg:block"
+          v-for="skill in keySkills"
+          :borderColor="skill.color"
+          >{{ skill.title }}</Tag
+        >
       </div>
     </div>
     <div class="lg:ml-auto">
       <nuxt-img
+        width="600"
         src="/img/headshot.webp"
-        class="rounded-full bg-white w-[70%] mx-auto lg:w-full md:mx-0"
+        class="rounded-full bg-white w-[100%] mx-auto lg:w-full md:mx-0 z-50 border-2 border-emerald-500"
         alt="Discover Nuxt 3"
       />
     </div>
@@ -39,23 +50,35 @@
     <SkillsAndTechnologies />
     <Projects />
   </div>
-  <TheNavigation />
+  <!-- <TheNavigation /> -->
 </template>
 
 <script setup lang="ts">
+const active = ref(0);
+
+onMounted(() => {
+  setInterval(() => {
+    active.value = (active.value + 1) % 4;
+  }, 3000);
+});
+
 const keySkills = [
   {
     title: "Frontend Development",
-    color: "pink-600",
+    color: "border-pink-600",
   },
   {
     title: "Backend Development",
-    color: "blue-600",
+    color: "border-blue-600",
   },
   {
     title: "Fullstack Development",
-    color: "emerald-600",
+    color: "border-emerald-600",
   },
+  // {
+  //   title: "Cloud Engineering",
+  //   color: "border-emerald-600",
+  // },
 ];
 
 useHead({

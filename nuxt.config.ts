@@ -8,11 +8,17 @@ export default defineNuxtConfig({
     "@nuxt/image-edge",
     "@nuxtjs/robots",
     "nuxt-headlessui",
+    "@pinia/nuxt",
   ],
+
   nitro: {
     preset: "vercel-edge",
     prerender: {
       crawlLinks: true,
     },
+  },
+
+  devtools: {
+    enabled: true,
   },
 });

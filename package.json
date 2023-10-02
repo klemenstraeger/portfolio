@@ -10,19 +10,22 @@
   },
   "devDependencies": {
     "@bg-dev/nuxt-naiveui": "^1.4.6",
-    "@nuxt/devtools": "^0.8.4",
-    "@nuxt/image-edge": "1.0.0-rc.2-28252196.34e7c67",
+    "@nuxt/devtools": "^0.8.5",
+    "@nuxt/image-edge": "1.0.0-rc.2-28264832.2387d47",
     "@nuxtjs/tailwindcss": "^6.8.0",
-    "@types/node": "^20.6.3",
+    "@types/node": "^20.7.1",
     "@vueuse/core": "^10.4.1",
     "@vueuse/nuxt": "^10.4.1",
-    "nuxt": "^3.7.3",
+    "nuxt": "^3.7.4",
     "nuxt-headlessui": "^1.1.4",
     "nuxt-icon": "^0.5.0"
   },
   "dependencies": {
     "@nuxtjs/robots": "^3.0.0",
+    "@pinia/nuxt": "^0.4.11",
     "@vercel/analytics": "^1.0.2",
-    "tailwindcss": "^3.3.3"
+    "pinia": "^2.1.6",
+    "tailwindcss": "^3.3.3",
+    "tailwindcss-animated": "^1.0.1"
   }
 }

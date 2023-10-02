@@ -1,30 +1,31 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   theme: {
     extend: {
       keyframes: {
         typing: {
-          '0%': {
-            width: '0%',
-            visibility: 'hidden',
+          "0%": {
+            width: "0%",
+            visibility: "hidden",
           },
-          '100%': {
-            width: '100%',
+          "100%": {
+            width: "100%",
           },
         },
         blink: {
-          '50%': {
-            borderColor: 'transparent',
+          "50%": {
+            borderColor: "transparent",
           },
-          '100%': {
-            borderColor: 'white',
+          "100%": {
+            borderColor: "white",
           },
         },
       },
       animation: {
-        typing: 'typing 5s steps(20) 1 alternate, blink 1s infinite',
+        typing: "typing 5s steps(20) 1 alternate, blink 1s infinite",
       },
     },
   },
-  plugins: [],
-}
+  plugins: [require("tailwindcss-animated")],
+};

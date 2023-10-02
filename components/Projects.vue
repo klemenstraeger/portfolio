@@ -20,7 +20,7 @@
             <div class="flex flex-wrap justify-stretch md:gap-3 mt-4">
               <Tag
                 :icon="technologie.icon"
-                :color="technologie.color"
+                :border-color="technologie.color"
                 v-for="technologie in project.usedTechnologies"
               >
                 {{ technologie.name }}</Tag
@@ -69,53 +69,53 @@ const projects = [
       {
         name: "Vue.js",
         icon: "logos:vue",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "TailwindCSS",
         icon: "logos:tailwindcss-icon",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "Chart.js",
         icon: "file-icons:chartjs",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "PrimeVue",
         icon: "prime:prime",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "TypeScript",
         icon: "logos:typescript-icon",
-        color: "blue-600",
+        color: "border-blue-600",
       },
 
       {
         name: "Prisma",
         icon: "logos:prisma",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "MSSQL",
         icon: "simple-icons:microsoftsqlserver",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "Express",
         icon: "simple-icons:express",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "Docker",
         icon: "logos:docker-icon",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "NGINX",
         icon: "logos:nginx",
-        color: "blue-600",
+        color: "border-blue-600",
       },
     ],
   },
@@ -133,52 +133,52 @@ EWO Adsmanager is a Nuxt 3 web application, which initially started as a Google 
       {
         name: "Nuxt 3",
         icon: "logos:nuxt-icon",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "TailwindCSS",
         icon: "logos:tailwindcss-icon",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "PrimeVue",
         icon: "prime:prime",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "TypeScript",
         icon: "logos:typescript-icon",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "Prisma",
         icon: "logos:prisma",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "Supabase",
         icon: "logos:supabase-icon",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "Docker",
         icon: "logos:docker-icon",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "Google Ads",
         icon: "logos:google-ads",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "Bing Ads",
         icon: "logos:bing",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "Google Cloud",
         icon: "logos:google-cloud",
-        color: "emerald-600",
+        color: "border-emerald-600",
       },
     ],
   },

@@ -96,6 +96,7 @@
     </div>
     <div class="grid grid-cols-3 gap-8 mt-12">
       <BlogItem />
+
       <BlogItem />
       <BlogItem />
     </div>

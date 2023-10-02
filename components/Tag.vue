@@ -1,7 +1,7 @@
 <template>
   <div
-    class="mr-2 center relative inline-block select-none whitespace-nowrap bg-gray-900 border-2 rounded-lg py-2 px-3.5 align-baseline mt-3 md:mt-0 font-bold leading-none text-white hover:translate-y-1 w-max transition duration-150 ease-in-out"
-    :class="'border-' + color"
+    :class="borderColor"
+    class="` mr-2 center relative inline-block select-none whitespace-nowrap bg-gray-900 border-2 rounded-lg py-2 px-3.5 align-baseline mt-3 md:mt-0 font-semibold leading-none text-white hover:translate-y-1 w-max transition duration-150 ease-in-out `"
   >
     <div class="mt-px flex items-center gap-2" :class="getSize(size)">
       <Icon v-if="icon" :name="icon"></Icon>
@@ -13,15 +13,17 @@
 <script setup lang="ts">
 export interface Props {
   icon?: string;
-  color?: string;
+  borderColor?: string;
   size?: "small" | "medium" | "large";
 }
 
 const props = withDefaults(defineProps<Props>(), {
   icon: "",
-  color: "emerald-500",
+  borderColor: "border-emerald-500",
   size: "medium",
 });
+
+console.log(props);
 
 const getSize = (size: string) => {
   switch (size) {
