@@ -58,7 +58,7 @@ const active = ref(0);
 
 onMounted(() => {
   setInterval(() => {
-    active.value = (active.value + 1) % 4;
+    active.value = (active.value + 1) % 3;
   }, 3000);
 });
 
