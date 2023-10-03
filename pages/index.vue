@@ -13,7 +13,9 @@
           </div>
         </div>
       </div>
-      <div class="text-white lg:text-2xl text-base font-normal mt-6 text-justify">
+      <div
+        class="text-white lg:text-2xl text-base font-normal mt-6 text-justify lg:text-left"
+      >
         I am a {{ new Date().getFullYear() - 2000 }} year old
         <span
           class="bg-gradient-to-r from-emerald-500 to-lime-600 bg-bottom bg-no-repeat bg-[length:100%_4px] hover:bg-[length:100%_100%] transition-[background-size] w-max"

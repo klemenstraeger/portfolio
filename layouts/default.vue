@@ -19,6 +19,10 @@
 
 <script setup lang="ts">
 import imagePath from "@/assets/bg.svg";
+import { vScrollLock } from "@vueuse/components";
+import { useAppStore } from "~/stores/app-store";
+
+const appStore = useAppStore();
 </script>
 
-<style scoped></style>
+<style></style>

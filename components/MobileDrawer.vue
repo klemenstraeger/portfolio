@@ -1,4 +1,6 @@
 <template>
+  <div v-show="drawerOpen" class="fixed inset-0 z-50 backdrop-blur-sm"></div>
+
   <!-- drawer component -->
   <div
     id="drawer-right-example"
@@ -6,15 +8,15 @@
     tabindex="-1"
     aria-labelledby="drawer-right-label"
     :class="{
-      'translate-x-100': appStore.drawerOpen,
-      'translate-x-full': !appStore.drawerOpen,
+      'translate-x-100': drawerOpen,
+      'translate-x-full': !drawerOpen,
     }"
   >
     <Icon
       name="mdi:close"
       size="24"
       class="absolute text-white top-4 right-4 cursor-pointer"
-      @click="appStore.drawerOpen = false"
+      @click="drawerOpen = false"
     />
     <div
       class="font-mono lg:font-semibold font-bold lg:text-4xl text-transparent text-lg bg-clip-text bg-gradient-to-r from-emerald-500 to-lime-600 py-2 absolute top-2 left-4"
@@ -31,7 +33,7 @@
           :to="link.to"
           :target="link.target"
           class="text-white flex items-center gap-2"
-          @click="appStore.drawerOpen = false"
+          @click="drawerOpen = false"
         >
           <Icon
             :name="link.name"
@@ -46,9 +48,12 @@
 </template>
 
 <script setup lang="ts">
+import { storeToRefs } from "pinia";
 import { useAppStore } from "~/stores/app-store";
 
 const appStore = useAppStore();
+
+const { drawerOpen } = storeToRefs(appStore);
 
 const links = [
   //   {
