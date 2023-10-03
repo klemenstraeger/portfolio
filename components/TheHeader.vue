@@ -18,7 +18,7 @@
     </div>
     <div class="lg:hidden">
       <Icon
-        name="ic:outline-menu"
+        name="tabler:menu"
         size="2rem"
         class="hover:scale-110 transition duration-150 ease-in-out hover:!text-emerald-500 text-white"
         @click="appStore.drawerOpen = !appStore.drawerOpen"
