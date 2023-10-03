@@ -24,16 +24,18 @@
         </span>
         studying at the Hochschule für Technik und Wirtschaft (HTW) in Dresden.
       </div>
-      <div class="mt-8 flex flex-col items-center md:flex-row" :key="active">
+      <div class="mt-8 lg:mt-12 lg:gap-x-2 flex flex-col items-center md:flex-row">
         <Tag
           class="lg:hidden animate-jump animate-ease-in shadow-[0_0_0px_#10b981,inset_0_0_0px_#10b981,0_0_1px_#10b981,0_0_5px_#10b981,0_0_25px_#10b981]"
           size="large"
+          :key="active"
           :class="keySkills[active].shadowColor"
           :border-color="keySkills[active].color"
           >{{ keySkills[active].title }}</Tag
         >
         <Tag
-          class="hidden lg:block"
+          class="hidden lg:block shadow-[0_0_0px_#10b981,inset_0_0_0px_#10b981,0_0_1px_#10b981,0_0_5px_#10b981,0_0_10px_#10b981]"
+          :class="skill.shadowColor"
           v-for="skill in keySkills"
           :borderColor="skill.color"
           >{{ skill.title }}</Tag
@@ -44,7 +46,7 @@
       <nuxt-img
         width="600"
         src="/img/headshot.webp"
-        class="rounded-full bg-white w-[100%] mx-auto lg:w-full md:mx-0 z-50 border-2 border-emerald-500"
+        class="rounded-full bg-white w-[100%] mx-auto lg:w-full md:mx-0 z-50"
         alt="Discover Nuxt 3"
       />
     </div>
@@ -70,12 +72,12 @@ const keySkills = [
   {
     title: "Frontend Development",
     color: "border-pink-600",
-    shadowColor: "shadow-pink-600",
+    shadowColor: "!shadow-pink-600",
   },
   {
     title: "Backend Development",
     color: "border-blue-600",
-    shadowColor: "shadow-blue-600",
+    shadowColor: "!shadow-blue-600",
   },
   {
     title: "Fullstack Development",
