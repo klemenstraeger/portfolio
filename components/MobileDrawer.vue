@@ -4,7 +4,7 @@
   <!-- drawer component -->
   <div
     id="drawer-right-example"
-    class="fixed top-0 right-0 z-50 h-screen overflow-y-auto transition-transform bg-white w-80 dark:bg-gray-800 flex flex-col justify-center border-l border-emerald-500"
+    class="fixed top-0 right-0 z-50 h-screen overflow-y-auto transition-transform w-80 bg-gray-800 flex flex-col justify-center border-l border-emerald-500"
     tabindex="-1"
     aria-labelledby="drawer-right-label"
     :class="{
