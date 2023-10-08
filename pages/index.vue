@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-[80vh] gap-y-10 mt-12 lg:mt-32 lg:grid-cols-2 lg:grid mx-4 flex flex-col justify-around"
+    class="lg:h-[80vh] gap-y-10 mt-12 lg:mt-32 lg:grid-cols-2 lg:grid mx-4 flex flex-col justify-around"
   >
     <div class="h-fit">
       <div class="text-white font-bold lg:text-6xl flex lg:py-2 text-3xl">
