@@ -18,16 +18,13 @@
               {{ project.description }}
             </p>
             <div class="flex flex-wrap justify-stretch md:gap-3 mt-4">
-              <div
+              <Tag
+                :icon="technologie.icon"
+                :border-color="technologie.color"
                 v-for="technologie in project.usedTechnologies"
-                class="mr-2 center relative inline-block select-none whitespace-nowrap bg-gray-900 border-2 rounded-lg py-2 px-3.5 align-baseline mt-3 md:mt-0 text-lg font-bold leading-none text-white hover:translate-y-1 w-max transition duration-150 ease-in-out"
-                :class="'border-' + technologie.color"
               >
-                <div class="mt-px md:text-base text-sm flex items-center gap-2">
-                  <Icon :name="technologie.icon"></Icon>
-                  {{ technologie.name }}
-                </div>
-              </div>
+                {{ technologie.name }}</Tag
+              >
             </div>
           </div>
           <n-carousel
@@ -72,53 +69,53 @@ const projects = [
       {
         name: "Vue.js",
         icon: "logos:vue",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "TailwindCSS",
         icon: "logos:tailwindcss-icon",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "Chart.js",
         icon: "file-icons:chartjs",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "PrimeVue",
         icon: "prime:prime",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "TypeScript",
         icon: "logos:typescript-icon",
-        color: "blue-600",
+        color: "border-blue-600",
       },
 
       {
         name: "Prisma",
         icon: "logos:prisma",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "MSSQL",
         icon: "simple-icons:microsoftsqlserver",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "Express",
         icon: "simple-icons:express",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "Docker",
         icon: "logos:docker-icon",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "NGINX",
         icon: "logos:nginx",
-        color: "blue-600",
+        color: "border-blue-600",
       },
     ],
   },
@@ -136,56 +133,57 @@ EWO Adsmanager is a Nuxt 3 web application, which initially started as a Google 
       {
         name: "Nuxt 3",
         icon: "logos:nuxt-icon",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "TailwindCSS",
         icon: "logos:tailwindcss-icon",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "PrimeVue",
         icon: "prime:prime",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "TypeScript",
         icon: "logos:typescript-icon",
-        color: "pink-600",
+        color: "border-pink-600",
       },
       {
         name: "Prisma",
         icon: "logos:prisma",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "Supabase",
         icon: "logos:supabase-icon",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "Docker",
         icon: "logos:docker-icon",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "Google Ads",
         icon: "logos:google-ads",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "Bing Ads",
         icon: "logos:bing",
-        color: "blue-600",
+        color: "border-blue-600",
       },
       {
         name: "Google Cloud",
         icon: "logos:google-cloud",
-        color: "emerald-600",
+        color: "border-emerald-600",
       },
     ],
   },
 ];
+const test = "test";
 </script>
 
 <style>
