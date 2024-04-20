@@ -2,7 +2,10 @@
   <div class="bg-gray-950 h-full w-full">
     <div
       class="fill-white/10 absolute h-[105vh] w-full lg:[mask-image:radial-gradient(white,transparent_70%)] hidden lg:block"
-      :style="{ backgroundImage: `url(${imagePath})`, backgroundSize: '100vw 110vh' }"
+      :style="{
+        backgroundImage: `url('bg.svg?inline')`,
+        backgroundSize: '100vw 110vh',
+      }"
     ></div>
     <MobileDrawer />
 
