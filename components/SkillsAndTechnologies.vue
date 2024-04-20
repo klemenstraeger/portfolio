@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-[50vh] mx-4 md:mx-0" id="skills">
     <h1 class="ml-auto lg:text-5xl text-3xl text-white font-semibold mb-12">
-      Skills & Technologies
+      {{ $t("skillAndTechnologies.header") }}
     </h1>
 
     <div class="grid gap-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
@@ -26,73 +26,75 @@
         <p class="my-2 font-medium text-gray-500">
           {{ skill.text }}
         </p>
-        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <!-- <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
           <div
             class="bg-blue-700 h-2.5 rounded-full loader"
             :style="'width:' + skill.skillLevel + '%'"
           ></div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
+
 const skills = [
   {
-    title: "Vue",
+    title: t("skillAndTechnologies.skills.entry1.title"),
     icon: "logos:vue",
-    text: "Go-to Frontend Framework, used in most of my projects",
+    text: t("skillAndTechnologies.skills.entry1.text"),
     color: "pink-600",
     skillLevel: 80,
   },
 
   {
-    title: "Nuxt",
+    title: t("skillAndTechnologies.skills.entry2.title"),
     icon: "logos:nuxt-icon",
-    text: "Currently learning and adapting to my projects",
+    text: t("skillAndTechnologies.skills.entry2.text"),
     color: "pink-600",
     skillLevel: 70,
   },
   {
-    title: "TailwindCSS",
+    title: t("skillAndTechnologies.skills.entry3.title"),
     icon: "logos:tailwindcss-icon",
-    text: "Basic knowledge",
+    text: t("skillAndTechnologies.skills.entry3.text"),
     color: "pink-600",
     skillLevel: 50,
   },
   {
-    title: "TypeScript ",
+    title: t("skillAndTechnologies.skills.entry4.title"),
     icon: "logos:typescript-icon",
-    text: "Advanced knowledge ",
+    text: t("skillAndTechnologies.skills.entry4.text"),
     color: "blue-600",
     skillLevel: 70,
   },
   {
-    title: "Docker ",
+    title: t("skillAndTechnologies.skills.entry5.title"),
     icon: "logos:docker-icon",
-    text: "Basic knowledge",
+    text: t("skillAndTechnologies.skills.entry6.text"),
     color: "blue-600",
     skillLevel: 50,
   },
   {
-    title: "Node.js ",
+    title: t("skillAndTechnologies.skills.entry7.title"),
     icon: "logos:nodejs-icon",
-    text: "Basic knowledge",
+    text: t("skillAndTechnologies.skills.entry7.text"),
     color: "blue-600",
     skillLevel: 50,
   },
   {
-    title: "SQL",
+    title: t("skillAndTechnologies.skills.entry8.title"),
     icon: "logos:postgresql",
-    text: "Basic knowledge",
+    text: t("skillAndTechnologies.skills.entry8.text"),
     color: "blue-600",
     skillLevel: 50,
   },
   {
-    title: "Google Cloud ",
+    title: t("skillAndTechnologies.skills.entry9.title"),
     icon: "logos:google-cloud",
-    text: "Basic knowledge",
+    text: t("skillAndTechnologies.skills.entry9.text"),
     color: "emerald-600",
     skillLevel: 50,
   },

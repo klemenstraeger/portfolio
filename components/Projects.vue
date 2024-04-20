@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-[50vh] mx-4 md:mx-0" id="projects">
     <div class="ml-auto lg:text-5xl mb-12 text-3xl text-white font-semibold">
-      Projects
+      {{ $t("projects.header") }}
     </div>
 
     <div class="flex flex-col gap-12">
@@ -53,11 +53,12 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
+
 const projects = [
   {
-    title: "Trommelhelden DB | 2023",
-    description:
-      "During our 7th semester, my fellow students and I embarked on the mandatory project of developing Trommelhelden DB Webfrontend, a comprehensive full-stack web application designed to facilitate CRUD operations. This project provided us the liberty to handpick our technology stack, which created an exciting platform to explore, assimilate, and apply a wide range of technologies. We further enriched the application by incorporating a feature to generate random seed data, enhancing its testing and demonstration capabilities.",
+    title: t("projects.entry1.title"),
+    description: t("projects.entry1.text"),
     images: [
       "/img/trommelhelden.png",
       "img/trommelhelden-create-data.png",
@@ -120,9 +121,8 @@ const projects = [
     ],
   },
   {
-    title: "EWO Ads Manager | 2021-2023",
-    description: `
-EWO Adsmanager is a Nuxt 3 web application, which initially started as a Google Apps Script, designed to optimize Google/Bing ads management, reporting, and keyword seeding. At its core, the BudgetManager service facilitates strategic ad budget planning based on seasonal demand and provides key statistics for each budget period. The TrafficReport service delivers insightful data on both paid and organic traffic at link and product group levels. Finally, the KeywordSeeding service generates new negative keywords based on the previous day's search terms, refining ad targeting and boosting campaign performance. `,
+    title: t("projects.entry2.title"),
+    description: t("projects.entry2.text"),
     images: [
       "/img/ewo-login.png",
       "/img/ewo-budgetmanager.png",

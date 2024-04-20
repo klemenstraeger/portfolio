@@ -1,0 +1,101 @@
+{
+  "headline": {
+    "IAm": "Hi, I'm",
+    "yearsOld": "I am a {0} year old",
+    "introSentenceHighlight": "Business Informatics student",
+    "introSentence": "studying at the Hochschule für Technik und Wirtschaft (HTW) in Dresden."
+  },
+  "intro": {
+    "keySkills": {
+      "skill1": "Frontend Development",
+      "skill2": "Backend Development",
+      "skill3": "Fullstack Development"
+    }
+  },
+  "seoServerMeta": {
+    "description": "Portfolio of Klemens Traeger",
+    "ogDescription": "Portfolio of Klemens Traeger"
+  },
+  "cv": {
+    "header": "Curriculum Vitae",
+    "entry1": {
+      "timeFrame": "08/2023 - now",
+      "title": "Software Developer (Working Student)",
+      "text": "Otto Group Solution Provider Dresden"
+    },
+    "entry2": {
+      "timeFrame": "09/2021 - 02/2022",
+      "title": "Internship Frontend / Backend Developer",
+      "text": "WEBneo GmbH, Dresden<br>• Shopware 6 plugin development with Vue.js<br> • Shopware store customization and template implementation<br> • Internal tools development with Vue.js and PHP"
+    },
+    "entry3": {
+      "timeFrame": "10/2019 - now",
+      "title": "Study of Business Informatics (Diploma)",
+      "text": "University of Applied Sciences Dresden (FH), expected Graduation in February 2024"
+    },
+    "entry4": {
+      "title": "Working student",
+      "text": "Energiewerk Ost GmbH <br> • Google & Bing Ads scripts & management<br> • Product text creation with AX Semantics<br> • Automation of budget control"
+    },
+    "entry5": {
+      "timeFrame": "10/2018 - 02/2019",
+      "title": "Gap Year, Work and Travel",
+      "text": "New Zealand"
+    },
+    "entry6": {
+      "timeFrame": "08/2010 - 06/2018",
+      "title": "High school diploma",
+      "text": "'Glückauf'-Gymnasium Dippoldiswalde final grade 2.7"
+    }
+  },
+  "skillAndTechnologies": {
+    "header": "Skills & Technologies",
+    "skills": {
+      "entry1": {
+        "title": "Vue",
+        "text": "Go-to Frontend Framework, used in most of my projects"
+      },
+      "entry2": {
+        "title": "Nuxt",
+        "text": "Currently learning and adapting to my projects"
+      },
+      "entry3": {
+        "text": "Basic knowledge",
+        "title": "TailwindCSS"
+      },
+      "entry4": {
+        "title": "TypeScript",
+        "text": "Advanced knowledge"
+      },
+      "entry5": {
+        "title": "Docker"
+      },
+      "entry6": {
+        "text": "Basic knowledge"
+      },
+      "entry7": {
+        "title": "Node.js",
+        "text": "Basic knowledge"
+      },
+      "entry8": {
+        "title": "SQL",
+        "text": "Basic knowledge"
+      },
+      "entry9": {
+        "title": "Google Cloud",
+        "text": "Basic knowledge"
+      }
+    }
+  },
+  "projects": {
+    "entry1": {
+      "title": "Trommelhelden DB | 2023",
+      "text": "During our 7th semester, my fellow students and I embarked on the mandatory project of developing Trommelhelden DB Webfrontend, a comprehensive full-stack web application designed to facilitate CRUD operations. This project provided us the liberty to handpick our technology stack, which created an exciting platform to explore, assimilate, and apply a wide range of technologies. We further enriched the application by incorporating a feature to generate random seed data, enhancing its testing and demonstration capabilities."
+    },
+    "entry2": {
+      "title": "EWO Ads Manager | 2021-2023",
+      "text": "EWO Adsmanager is a Nuxt 3 web application, which initially started as a Google Apps Script, designed to optimize Google/Bing ads management, reporting, and keyword seeding. At its core, the BudgetManager service facilitates strategic ad budget planning based on seasonal demand and provides key statistics for each budget period. The TrafficReport service delivers insightful data on both paid and organic traffic at link and product group levels. Finally, the KeywordSeeding service generates new negative keywords based on the previous day's search terms, refining ad targeting and boosting campaign performance."
+    },
+    "header": "Projects"
+  }
+}

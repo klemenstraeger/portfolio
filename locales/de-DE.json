@@ -1,0 +1,101 @@
+{
+  "headline": {
+    "IAm": "Hi, ich bin",
+    "introSentence": "an der Hochschule für Technik und Wirtschaft (HTW) in Dresden.",
+    "introSentenceHighlight": "Wirtschaftsinformatik",
+    "yearsOld": "Ich bin {0} Jahre alt  und studiere "
+  },
+  "intro": {
+    "keySkills": {
+      "skill1": "Frontend-Entwicklung",
+      "skill2": "Backend-Entwicklung",
+      "skill3": "Fullstack-Entwicklung"
+    }
+  },
+  "seoServerMeta": {
+    "description": "Portfolio von Klemens Traeger",
+    "ogDescription": "Portfolio von Klemens Traeger"
+  },
+  "cv": {
+    "entry1": {
+      "text": "Otto Group Solution Provider Dresden",
+      "timeFrame": "08.2023 - jetzt",
+      "title": "Softwareentwickler (Werkstudent)"
+    },
+    "entry2": {
+      "text": "WEBneo GmbH, Dresden<br>• Shopware 6 Plugin-Entwicklung mit Vue.js<br> • Shopware Store-Anpassung und Template-Implementierung<br> • Entwicklung Interner Tools mit Vue.js und PHP",
+      "timeFrame": "09.2021 - 02.2022",
+      "title": "Praktikum Frontend-/Backend-Entwickler"
+    },
+    "entry3": {
+      "text": "Fachhochschule Dresden (FH), voraussichtlicher Abschluss im Februar 2024",
+      "timeFrame": "10.2019 – jetzt",
+      "title": "Studium der Wirtschaftsinformatik (Diplom)"
+    },
+    "entry4": {
+      "text": "Energiewerk Ost GmbH <br>\n• Google & Bing Ads Scripts & Management<br> \n• Produkttexterstellung mit AX Semantics<br> \n• Automatisierung der Budgetkontrolle",
+      "title": "Werksstudent"
+    },
+    "entry5": {
+      "text": "Neuseeland",
+      "timeFrame": "10.2018 - 02.2019",
+      "title": "Auslandsjahr, Work & Travel"
+    },
+    "entry6": {
+      "text": "\"Glückauf-Gymnasium\" Dippoldiswalde Abschlussnote 2,7",
+      "timeFrame": "08.2010 - 06.2018",
+      "title": "Abitur"
+    },
+    "header": "Lebenslauf"
+  },
+  "projects": {
+    "entry1": {
+      "text": "Während unseres 7. Semesters begannen meine Kommilitonen und ich mit dem Pflichtprojekt zur Entwicklung des Trommelhelden DB Webfrontend, einer umfassenden Full-Stack-Webanwendung, die den CRUD-Betrieb einer typischen Webapplikation erklären soll. \nDieses Projekt gab uns die Freiheit, unseren Technologie-Stack selbst auszuwählen, wodurch eine spannende Plattform für die Erforschung, Integration und Anwendung einer breiten Palette von Technologien entstand. \nWir haben die Anwendung weiter bereichert, indem wir eine Funktion zur Generierung zufälliger Start-Daten integriert haben, wodurch ihre Test- und Demonstrationsfähigkeiten verbessert wurden.",
+      "title": "Trommelhelden DB | 2023"
+    },
+    "entry2": {
+      "text": "EWO Adsmanager ist eine Nuxt 3-Webanwendung, die ursprünglich als Google Apps-Skript begann und darauf ausgelegt war, die Verwaltung, Berichterstellung und das Keyword-Seeding von Google/Bing-Anzeigen zu optimieren. \nIm Kern erleichtert der BudgetManager-Dienst die strategische Planung von Werbebudgets basierend auf der saisonalen Nachfrage und stellt wichtige Statistiken für jeden Budgetzeitraum bereit. \nDer TrafficReport-Dienst liefert aufschlussreiche Daten zum bezahlten und organischen Traffic auf Link- und Produktgruppenebene. \nSchließlich generiert der KeywordSeeding-Dienst neue ausschließende Keywords basierend auf den Suchbegriffen des Vortages, wodurch die Anzeigenausrichtung verfeinert und die Kampagnenleistung gesteigert wird.",
+      "title": "EWO-Anzeigenmanager | 2021-2023"
+    },
+    "header": "Projekte"
+  },
+  "skillAndTechnologies": {
+    "header": "Fähigkeiten & Technologien",
+    "skills": {
+      "entry1": {
+        "text": "Go-to-Frontend-Framework, das in den meisten meiner Projekte verwendet wird",
+        "title": "Vue"
+      },
+      "entry2": {
+        "text": "Ich lerne gerade und füge es meinen Projekte hinzu.",
+        "title": "Nuxt"
+      },
+      "entry3": {
+        "text": "Grundwissen",
+        "title": "TailwindCSS"
+      },
+      "entry4": {
+        "text": "Fortgeschrittene Kenntnisse",
+        "title": "TypeScript"
+      },
+      "entry5": {
+        "title": "Docker"
+      },
+      "entry6": {
+        "text": "Grundwissen"
+      },
+      "entry7": {
+        "text": "Grundwissen",
+        "title": "Node.js"
+      },
+      "entry8": {
+        "text": "Grundwissen",
+        "title": "SQL"
+      },
+      "entry9": {
+        "text": "Grundwissen",
+        "title": "Google Cloud"
+      }
+    }
+  }
+}

@@ -23,8 +23,6 @@ const props = withDefaults(defineProps<Props>(), {
   size: "medium",
 });
 
-console.log(props);
-
 const getSize = (size: string) => {
   switch (size) {
     case "small":

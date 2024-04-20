@@ -1,10 +1,10 @@
 <template>
   <div
-    class="lg:h-[80vh] gap-y-10 mt-12 lg:mt-32 lg:grid-cols-2 lg:grid mx-4 flex flex-col justify-around"
+    class="lg:h-[80vh] gap-y-10 mt-12 lg:mt-32 md:grid-cols-2 md:grid mx-4 flex flex-col justify-around md:min-h-[50vh]"
   >
-    <div class="h-fit">
-      <div class="text-white font-bold lg:text-6xl flex lg:py-2 text-3xl">
-        <div class="lg:py-4">Hi, I'm&nbsp;</div>
+    <div class="h-fit flex-grow">
+      <div class="text-white font-bold lg:text-5xl flex lg:py-2 text-3xl">
+        <div class="lg:py-4">{{ $t("headline.IAm") }}&nbsp;</div>
         <div class="w-max">
           <div
             class="animate-typing whitespace-nowrap lg:border-r-4 border-r-2 border-r-white lg:pr-6 text-transparent bg-clip-text bg-gradient-to-l from-emerald-500 to-lime-600 lg:py-4"
@@ -16,15 +16,15 @@
       <div
         class="text-white lg:text-2xl text-base font-normal mt-6 text-justify lg:text-left"
       >
-        I am a {{ new Date().getFullYear() - 2000 }} year old
+        {{ $t("headline.yearsOld", [new Date().getFullYear() - 2000]) }}
         <span
           class="bg-gradient-to-r from-emerald-500 to-lime-600 bg-bottom bg-no-repeat bg-[length:100%_4px] hover:bg-[length:100%_100%] transition-[background-size] w-max"
         >
-          Business Informatics student
+          {{ $t("headline.introSentenceHighlight") }}
         </span>
-        studying at the Hochschule für Technik und Wirtschaft (HTW) in Dresden.
+        {{ $t("headline.introSentence") }}
       </div>
-      <div class="mt-8 lg:mt-12 lg:gap-x-2 flex flex-col items-center md:flex-row">
+      <div class="mt-8 lg:mt-12 lg:gap-x-2 flex flex-col items-center lg:flex-row">
         <Tag
           class="lg:hidden animate-jump animate-ease-in shadow-[0_0_0px_#10b981,inset_0_0_0px_#10b981,0_0_1px_#10b981,0_0_5px_#10b981,0_0_25px_#10b981]"
           size="large"
@@ -42,7 +42,7 @@
         >
       </div>
     </div>
-    <div class="lg:ml-auto">
+    <div class="md:ml-auto">
       <nuxt-img
         width="600"
         src="/img/headshot.webp"
@@ -60,8 +60,8 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
 const active = ref(0);
-
 onMounted(() => {
   setInterval(() => {
     active.value = (active.value + 1) % 3;
@@ -70,24 +70,20 @@ onMounted(() => {
 
 const keySkills = [
   {
-    title: "Frontend Development",
+    title: t("intro.keySkills.skill1"),
     color: "border-pink-600",
     shadowColor: "!shadow-pink-600",
   },
   {
-    title: "Backend Development",
+    title: t("intro.keySkills.skill2"),
     color: "border-blue-600",
     shadowColor: "!shadow-blue-600",
   },
   {
-    title: "Fullstack Development",
+    title: t("intro.keySkills.skill3"),
     color: "border-emerald-600",
     shadowColor: "shadow-emerald-600",
   },
-  // {
-  //   title: "Cloud Engineering",
-  //   color: "border-emerald-600",
-  // },
 ];
 
 useHead({
@@ -97,8 +93,8 @@ useHead({
 useServerSeoMeta({
   title: "klemenstraeger.dev",
   ogTitle: "klemenstraeger.dev",
-  description: "Portfolio of Klemens Traeger",
-  ogDescription: "Portfolio of Klemens Traeger",
+  description: t("seoServerMeta.description"),
+  ogDescription: t("seoServerMeta.ogDescription"),
   ogImage: "img/headshot.webp",
 });
 </script>

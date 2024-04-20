@@ -9,12 +9,21 @@ export default defineNuxtConfig({
     "@nuxtjs/robots",
     "nuxt-headlessui",
     "@pinia/nuxt",
+    "@nuxtjs/i18n",
   ],
 
   nitro: {
     preset: "vercel-edge",
     prerender: {
       crawlLinks: true,
+    },
+  },
+  i18n: {
+    vueI18n: "./i18n.config.ts", // if you are using custom path, default
+    detectBrowserLanguage: {
+      useCookie: false,
+      redirectOn: "all",
+      alwaysRedirect: true,
     },
   },
 

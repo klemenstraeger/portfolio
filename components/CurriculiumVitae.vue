@@ -2,7 +2,7 @@
   <div class="min-h-[50vh] mt-12 md:mt-0" id="cv">
     <section>
       <h3 class="lg:text-5xl text-3xl mx-4 mb-4 md:mx-0 text-white font-semibold">
-        Curriculum Vitae
+        {{ $t("cv.header") }}
       </h3>
       <div class="text-white lg:py-8">
         <div class="container mx-auto">
@@ -40,49 +40,51 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
+
 const cvEntries = [
   {
-    timeFrame: "08/2023 - now",
-    title: "Software Developer (Working Student)",
-    text: "Otto Group Solution Provider Dresden",
+    timeFrame: t("cv.entry1.timeFrame"),
+    title: t("cv.entry1.title"),
+    text: t("cv.entry1.text"),
     icon: "material-symbols:work-outline",
   },
   {
-    timeFrame: "09/2021 - 02/2022",
-    title: "Internship Frontend / Backend Developer ",
-    text: `WEBneo GmbH, Dresden<br>• Shopware 6 plugin development with Vue.js<br>
-• Shopware store customization and template implementation<br>
-• Internal tools development with Vue.js and PHP`,
+    timeFrame: t("cv.entry2.timeFrame"),
+    title: t("cv.entry2.title"),
+    text: t("cv.entry2.text"),
     icon: "ion:layers",
   },
   {
-    timeFrame: "10/2019 - now",
-    title: "Study of Business Informatics (Diploma)",
-    text: `University of Applied Sciences Dresden (FH), expected Graduation in February 2024`,
+    timeFrame: t("cv.entry3.timeFrame"),
+    title: t("cv.entry3.title"),
+    text: t("cv.entry3.text"),
     icon: "mdi:account-school",
   },
   {
-    timeFrame: "05/2019 - 09/2021",
-    title: "Working student",
-    text: `Energiewerk Ost GmbH <br>
-                    • Google & Bing Ads scripts & management<br>
-                    • Product text creation with AX Semantics<br>
-                    • Automation of budget control`,
+    timeFrame: t("cv.entry4.title"),
+    title: t("cv.entry4.title"),
+    text: t("cv.entry4.text"),
     icon: "material-symbols:work-outline",
   },
   {
-    timeFrame: "10/2018 - 02/2019",
-    title: "Gap Year, Work and Travel",
-    text: `New Zealand`,
+    timeFrame: t("cv.entry5.timeFrame"),
+    title: t("cv.entry5.title"),
+    text: t("cv.entry5.text"),
     icon: "streamline:travel-airport-earth-airplane-travel-plane-trip-airplane-international-adventure-globe-world",
   },
   {
-    timeFrame: "08/2010 - 06/2018",
-    title: "High school diploma",
-    text: `'Glückauf'-Gymnasium Dippoldiswalde final grade 2.7`,
+    timeFrame: t("cv.entry6.timeFrame"),
+    title: t("cv.entry6.title"),
+    text: t("cv.entry6.text"),
     icon: "map:school",
   },
 ];
 </script>
 
-<style scoped></style>
+<style scoped>
+.glowing-emerald {
+  box-shadow: 0 0 10px #10b981, 0 0 20px #10b981, 0 0 30px #10b981, 0 0 40px #10b981,
+    0 0 70px #10b981, 0 0 80px #10b981, 0 0 100px #10b981, 0 0 150px #10b981;
+}
+</style>

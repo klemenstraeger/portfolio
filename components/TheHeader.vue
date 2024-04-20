@@ -16,6 +16,7 @@
         />
       </NuxtLink>
     </div>
+
     <div class="lg:hidden">
       <Icon
         name="tabler:menu"
