@@ -62,6 +62,63 @@ const { t } = useI18n();
 
 const projects = [
   {
+    title: t("projects.entry0.title"),
+    description: t("projects.entry0.text"),
+    images: [
+      "img/login.png",
+      "img/start-seite.png",
+      "img/upload-done.PNG",
+      "img/mapping_ergebnisse_done.png",
+    ],
+    usedTechnologies: [
+      {
+        name: "Python",
+        icon: "logos:python",
+        color: "border-blue-600",
+      },
+      {
+        name: "TypeScript",
+        icon: "logos:typescript-icon",
+        color: "border-blue-600",
+      },
+      {
+        name: "Nuxt 3",
+        icon: "logos:nuxt-icon",
+        color: "border-pink-600",
+      },
+      {
+        name: "TailwindCSS",
+        icon: "logos:tailwindcss-icon",
+        color: "border-pink-600",
+      },
+      {
+        name: "Chart.js",
+        icon: "file-icons:chartjs",
+        color: "border-pink-600",
+      },
+      {
+        name: "PrimeVue",
+        icon: "prime:prime",
+        color: "border-pink-600",
+      },
+      {
+        name: "Nitro.js",
+        icon: "unjs:nitro",
+        color: "border-pink-600",
+      },
+      {
+        name: "OpenAI",
+        icon: "logos:openai-icon",
+        color: "border-emerald-600",
+      },
+      {
+        name: "Google Cloud",
+        icon: "logos:google-cloud",
+        color: "border-emerald-600",
+      },
+    ],
+  },
+  {
     title: t("projects.entry1.title"),
     description: t("projects.entry1.text"),
     repo: "https://github.com/htw-dresden-ps23/trommelhelden-web-frontend",

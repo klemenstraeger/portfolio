@@ -97,6 +97,10 @@
       "title": "EWO Ads Manager | 2021-2023",
       "text": "EWO Adsmanager is a Nuxt 3 web application, which initially started as a Google Apps Script, designed to optimize Google/Bing ads management, reporting, and keyword seeding. At its core, the BudgetManager service facilitates strategic ad budget planning based on seasonal demand and provides key statistics for each budget period. The TrafficReport service delivers insightful data on both paid and organic traffic at link and product group levels. Finally, the KeywordSeeding service generates new negative keywords based on the previous day's search terms, refining ad targeting and boosting campaign performance."
     },
-    "header": "Projects"
+    "header": "Projects",
+    "entry0": {
+      "title": "Diploma thesis",
+      "text": "I developed a prediction service for my diploma thesis on the topic \"Use of ML techniques to facilitate the allocation of customer product groups to sectors of the Supply Chain Due Diligence Act\". This service enables the prediction of sectors using a zero-shot model and GPT. In addition, I have designed a web application that can be used to upload the input data and check and correct the results of the prediction. Translated with DeepL.com (free version)"
+    }
   }
 }
