@@ -16,8 +16,8 @@
             ><Icon class="text-white text-3xl" name="mdi:github"></Icon
           ></NuxtLink>
         </div>
-        <div class="grid md:grid-cols-2">
-          <div class="md:w-3/4 w-full space-y-4">
+        <div class="grid md:grid-cols-10">
+          <div class="md:w-3/4 w-full space-y-4 col-span-6">
             <p class="text-white mt-4 font-normal text-sm md:text-base text-left">
               {{ project.description }}
             </p>
@@ -67,7 +67,7 @@ const projects = [
     images: [
       "img/login.png",
       "img/start-seite.png",
-      "img/upload-done.png",
+      "img/upload_done.png",
       "img/mapping_ergebnisse_done.png",
     ],
     usedTechnologies: [
