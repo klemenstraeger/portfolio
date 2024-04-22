@@ -67,7 +67,7 @@ const projects = [
     images: [
       "img/login.png",
       "img/start-seite.png",
-      "img/upload-done.PNG",
+      "img/upload-done.png",
       "img/mapping_ergebnisse_done.png",
     ],
     usedTechnologies: [
