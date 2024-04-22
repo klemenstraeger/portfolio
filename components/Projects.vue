@@ -3,11 +3,10 @@
     <div class="ml-auto lg:text-5xl mb-12 text-3xl text-white font-semibold">
       {{ $t("projects.header") }}
     </div>
-
     <div class="flex flex-col gap-12">
       <div
         class="relative block rounded-lg p-4 sm:p-6 lg:p-8 bg-gray-900"
-        v-for="project in projects"
+        v-for="(project, index) in projects"
       >
         <h1 class="text-emerald-500 text-xl md:text-3xl font-extrabold">
           {{ project.title }}
@@ -33,6 +32,7 @@
             draggable
             autoplay
             :show-dots="false"
+            :interval="index * 1000 + 5000"
             class="rounded-md img-carousel"
             keyboard
           >

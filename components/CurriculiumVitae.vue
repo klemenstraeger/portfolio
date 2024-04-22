@@ -4,12 +4,19 @@
       <h3 class="lg:text-5xl text-3xl mx-4 mb-4 md:mx-0 text-white font-semibold">
         {{ $t("cv.header") }}
       </h3>
+      <MeteorBackground class="" />
       <div class="text-white lg:py-8">
         <div class="container mx-auto">
           <div class="sticky">
             <div class="container mx-auto w-full h-fit">
               <div class="relative wrap overflow-hidden h-full px-4 md:px-0">
-                <div v-for="(entry, index) in cvEntries" :key="text" class="">
+                <div
+                  v-for="(entry, index) in cvEntries"
+                  :key="text"
+                  class="
+                  
+                "
+                >
                   <div
                     class="border-2 rounded-lg absolute h-full border-emerald-500 border-solid left-2/4 -z-50 md:flex"
                   ></div>
@@ -23,6 +30,7 @@
                   >
                     <div class="order-1 w-5/12 hidden md:block"></div>
                     <CVEntry
+                      class="hover:scale-105 transition duration-300 ease-in-out"
                       :timeFrame="entry.timeFrame"
                       :title="entry.title"
                       :text="entry.text"

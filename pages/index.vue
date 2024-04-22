@@ -3,7 +3,7 @@
     class="lg:h-[80vh] gap-y-10 mt-12 lg:mt-32 md:grid-cols-2 md:grid mx-4 flex flex-col justify-around md:min-h-[50vh]"
   >
     <div class="h-fit flex-grow">
-      <div class="text-white font-bold lg:text-5xl flex lg:py-2 text-3xl">
+      <div class="text-white font-bold lg:text-5xl flex lg:py-2 text-2xl">
         <div class="lg:py-4">{{ $t("headline.IAm") }}&nbsp;</div>
         <div class="w-max">
           <div
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div
-        class="text-white lg:text-2xl text-base font-normal mt-6 text-justify lg:text-left"
+        class="text-white lg:text-2xl text-sm font-normal mt-6 text-justify lg:text-left"
       >
         {{ $t("headline.yearsOld", [new Date().getFullYear() - 2000]) }}
         <span

@@ -4,6 +4,18 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
+        meteor: {
+          "0%": {
+            transform: "rotate(220deg) ",
+            opacity: 0,
+          },
+          "10%": {
+            opacity: 1,
+          },
+
+          "70%": { opacity: 1 },
+          "100%": { transform: "rotate(220deg) translateX(-95vw)", opacity: 0 },
+        },
         typing: {
           "0%": {
             width: "0%",
@@ -24,6 +36,7 @@ module.exports = {
       },
       animation: {
         typing: "typing 5s steps(20) 1 alternate, blink 1s infinite",
+        "meteor-effect": "meteor 10s linear infinite",
       },
     },
   },
