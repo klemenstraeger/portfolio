@@ -196,4 +196,8 @@ const test = "test";
 .n-carousel__arrow {
   background-color: rgba(107, 107, 107, 0.493) !important;
 }
+
+.n-carousel__arrow-group {
+  top: 10px;
+}
 </style>
