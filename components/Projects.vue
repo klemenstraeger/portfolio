@@ -198,6 +198,6 @@ const test = "test";
 }
 
 .n-carousel__arrow-group {
-  top: 10px;
+  transform: translateY(10px);
 }
 </style>
