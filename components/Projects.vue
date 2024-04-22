@@ -8,11 +8,16 @@
         class="relative block rounded-lg p-4 sm:p-6 lg:p-8 bg-gray-900"
         v-for="(project, index) in projects"
       >
-        <h1 class="text-emerald-500 text-xl md:text-3xl font-extrabold">
-          {{ project.title }}
-        </h1>
+        <div class="flex items-center justify-between">
+          <h1 class="text-emerald-500 text-xl md:text-3xl font-extrabold">
+            {{ project.title }}
+          </h1>
+          <NuxtLink :href="project.repo" target="_blank" v-if="project.repo"
+            ><Icon class="text-white text-3xl" name="mdi:github"></Icon
+          ></NuxtLink>
+        </div>
         <div class="grid md:grid-cols-2">
-          <div class="md:w-3/4 w-full">
+          <div class="md:w-3/4 w-full space-y-4">
             <p class="text-white mt-4 font-normal text-sm md:text-base text-left">
               {{ project.description }}
             </p>
@@ -59,6 +64,7 @@ const projects = [
   {
     title: t("projects.entry1.title"),
     description: t("projects.entry1.text"),
+    repo: "https://github.com/htw-dresden-ps23/trommelhelden-web-frontend",
     images: [
       "/img/trommelhelden.png",
       "img/trommelhelden-create-data.png",

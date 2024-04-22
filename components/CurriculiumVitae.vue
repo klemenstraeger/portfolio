@@ -30,7 +30,6 @@
                   >
                     <div class="order-1 w-5/12 hidden md:block"></div>
                     <CVEntry
-                      class="hover:scale-105 transition duration-300 ease-in-out"
                       :timeFrame="entry.timeFrame"
                       :title="entry.title"
                       :text="entry.text"
