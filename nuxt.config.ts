@@ -13,7 +13,6 @@ export default defineNuxtConfig({
   ],
 
   nitro: {
-    preset: "vercel-edge",
     prerender: {
       crawlLinks: true,
     },
