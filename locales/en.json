@@ -10,7 +10,12 @@
       "skill1": "Frontend Development",
       "skill2": "Backend Development",
       "skill3": "Fullstack Development"
-    }
+    },
+    "intro1": "I am {0} years old,",
+    "intro2": "a graduate in Business Informatics",
+    "intro3": "and an enthusiastic",
+    "intro4": "Fullstack Developer",
+    "intro5": "with a passion for Vue.js and Nuxt.js."
   },
   "seoServerMeta": {
     "description": "Portfolio of Klemens Traeger",
@@ -84,6 +89,10 @@
       },
       "entry9": {
         "title": "Google Cloud",
+        "text": "Basic knowledge"
+      },
+      "entry10": {
+        "title": "Python",
         "text": "Basic knowledge"
       }
     }

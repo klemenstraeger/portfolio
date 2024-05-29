@@ -1,9 +1,9 @@
 <template>
   <div
-    class="lg:h-[80vh] gap-y-10 mt-12 lg:mt-32 md:grid-cols-2 md:grid mx-4 flex flex-col justify-around md:min-h-[50vh]"
+    class="lg:h-[80vh] gap-y-10 mt-12 lg:mt-32 md:grid-cols-2 md:grid mx-4 flex flex-col justify-around lg:min-h-[50vh]"
   >
     <div class="h-fit flex-grow">
-      <div class="text-white font-bold lg:text-5xl flex lg:py-2 text-2xl">
+      <div class="text-white font-bold lg:text-4xl xl:text-5xl flex lg:py-2 text-2xl">
         <div class="lg:py-4">{{ $t("headline.IAm") }}&nbsp;</div>
         <div class="w-max">
           <div
@@ -16,13 +16,18 @@
       <div
         class="text-white lg:text-2xl text-sm font-normal mt-6 text-justify lg:text-left"
       >
-        {{ $t("headline.yearsOld", [new Date().getFullYear() - 2000]) }}
+        {{ $t("intro.intro1", [new Date().getFullYear() - 2000]) }}
+
         <span
           class="bg-gradient-to-r from-emerald-500 to-lime-600 bg-bottom bg-no-repeat bg-[length:100%_4px] hover:bg-[length:100%_100%] transition-[background-size] w-max"
+          >{{ $t("intro.intro2") }}</span
         >
-          {{ $t("headline.introSentenceHighlight") }}
-        </span>
-        {{ $t("headline.introSentence") }}
+        {{ $t("intro.intro3") }}
+        <span
+          class="bg-gradient-to-r from-emerald-500 to-lime-600 bg-bottom bg-no-repeat bg-[length:100%_4px] hover:bg-[length:100%_100%] transition-[background-size] w-max"
+          >{{ $t("intro.intro4") }}</span
+        >
+        {{ $t("intro.intro5") }}
       </div>
       <div class="mt-8 lg:mt-12 lg:gap-x-2 flex flex-col items-center lg:flex-row">
         <Tag
@@ -46,7 +51,7 @@
       <nuxt-img
         width="600"
         src="/img/headshot.webp"
-        class="rounded-full bg-white w-[100%] mx-auto lg:w-full md:mx-0 z-50"
+        class="rounded-full bg-white mx-auto xl:w-full w-80 md:mx-0 z-50"
         alt="Discover Nuxt 3"
       />
     </div>

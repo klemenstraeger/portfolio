@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-[50vh] mx-4 md:mx-0" id="projects">
-    <div class="ml-auto lg:text-5xl mb-12 text-3xl text-white font-semibold">
+    <div class="ml-auto lg:text-5xl mb-4 lg:mb-8 text-3xl text-white font-semibold">
       {{ $t("projects.header") }}
     </div>
     <div class="flex flex-col gap-12">
@@ -16,29 +16,19 @@
             ><Icon class="text-white text-3xl" name="mdi:github"></Icon
           ></NuxtLink>
         </div>
-        <div class="grid md:grid-cols-2">
-          <div class="md:w-3/4 w-full space-y-4">
+        <div class="grid xl:grid-cols-2 xl:grid-rows-2 xl:gap-x-12">
+          <div class="w-full space-y-4 lg:row-start-1">
             <p class="text-white mt-4 font-normal text-sm md:text-base text-left">
               {{ project.description }}
             </p>
-            <div class="flex flex-wrap justify-stretch md:gap-3 mt-4">
-              <Tag
-                :icon="technologie.icon"
-                :border-color="technologie.color"
-                v-for="technologie in project.usedTechnologies"
-              >
-                {{ technologie.name }}</Tag
-              >
-            </div>
           </div>
           <n-carousel
             dot-placement="bottom"
-            show-arrow
             draggable
             autoplay
             :show-dots="false"
             :interval="index * 1000 + 5000"
-            class="rounded-md img-carousel"
+            class="rounded-md img-carousel lg:row-span-2 xl:col-start-2"
             keyboard
           >
             <nuxt-img
@@ -47,10 +37,20 @@
               loading="lazy"
               quality="100"
               v-for="img in project.images"
-              class="mt-4 rounded-md !w-full md:h-[400px] object-cover"
+              class="mt-4 rounded-md !w-full md:h-[400px] object-contain xl:object-scale-down"
               :src="img"
             />
           </n-carousel>
+          <div class="flex flex-wrap md:gap-3 mt-4 xl:row-start-2 h-fit justify-self-end">
+            <Tag
+              :icon="technologie.icon"
+              :border-color="technologie.color"
+              v-for="technologie in project.usedTechnologies"
+              class="h-fit"
+            >
+              {{ technologie.name }}</Tag
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -252,9 +252,5 @@ const test = "test";
 <style>
 .n-carousel__arrow {
   background-color: rgba(107, 107, 107, 0.493) !important;
-}
-
-.n-carousel__arrow-group {
-  transform: translateY(10px);
 }
 </style>

@@ -27,7 +27,7 @@
       <div
         v-for="link in links"
         :key="link.name"
-        class="bg-gray-900 border-t py-8 px-4 border-emerald-500 w-full text-3xl flex"
+        class="bg-gray-900 py-8 px-4 w-full text-3xl flex border-y border-emerald-500"
       >
         <NuxtLink
           :to="link.to"
@@ -54,6 +54,12 @@ import { useAppStore } from "~/stores/app-store";
 const appStore = useAppStore();
 
 const { drawerOpen } = storeToRefs(appStore);
+
+const isLocked = useScrollLock(document);
+
+watch(drawerOpen, (value) => {
+  isLocked.value = value;
+});
 
 const links = [
   //   {

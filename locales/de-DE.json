@@ -6,6 +6,11 @@
     "yearsOld": "Ich bin {0} Jahre alt  und studiere "
   },
   "intro": {
+    "intro1": "Ich bin {0} Jahre alt, Absolvent der",
+    "intro2": "Wirtschaftsinformatik",
+    "intro3": "und begeisterter",
+    "intro4": "Fullstack-Entwickler",
+    "intro5": "mit einer Leidenschaft für Vue.js und Nuxt.js.",
     "keySkills": {
       "skill1": "Frontend-Entwicklung",
       "skill2": "Backend-Entwicklung",
@@ -100,6 +105,10 @@
       "entry9": {
         "text": "Grundwissen",
         "title": "Google Cloud"
+      },
+      "entry10": {
+        "title": "Python",
+        "text": "Grundwissen"
       }
     }
   }

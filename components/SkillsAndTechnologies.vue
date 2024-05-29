@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-[50vh] mx-4 md:mx-0" id="skills">
-    <h1 class="ml-auto lg:text-5xl text-3xl text-white font-semibold mb-12">
+    <h1 class="ml-auto lg:text-5xl text-3xl text-white font-semibold mb-4 lg:mb-6">
       {{ $t("skillAndTechnologies.header") }}
     </h1>
 
@@ -67,6 +67,13 @@ const skills = [
     title: t("skillAndTechnologies.skills.entry4.title"),
     icon: "logos:typescript-icon",
     text: t("skillAndTechnologies.skills.entry4.text"),
+    color: "blue-600",
+    skillLevel: 70,
+  },
+  {
+    title: t("skillAndTechnologies.skills.entry10.title"),
+    icon: "logos:python",
+    text: t("skillAndTechnologies.skills.entry10.text"),
     color: "blue-600",
     skillLevel: 70,
   },

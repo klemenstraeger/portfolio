@@ -1,22 +1,16 @@
 <template>
   <div class="min-h-[50vh] mt-12 md:mt-0" id="cv">
     <section>
-      <h3 class="lg:text-5xl text-3xl mx-4 mb-4 md:mx-0 text-white font-semibold">
+      <h3 class="lg:text-5xl text-3xl mx-4 md:mx-0 text-white font-semibold -mb-2">
         {{ $t("cv.header") }}
       </h3>
       <MeteorBackground class="" />
-      <div class="text-white lg:py-8">
+      <div class="text-white">
         <div class="container mx-auto">
           <div class="sticky">
             <div class="container mx-auto w-full h-fit">
               <div class="relative wrap overflow-hidden h-full px-4 md:px-0">
-                <div
-                  v-for="(entry, index) in cvEntries"
-                  :key="text"
-                  class="
-                  
-                "
-                >
+                <div v-for="(entry, index) in cvEntries" :key="text" class="">
                   <div
                     class="border-2 rounded-lg absolute h-full border-emerald-500 border-solid left-2/4 -z-50 md:flex"
                   ></div>
