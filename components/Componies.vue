@@ -16,7 +16,7 @@
       ></NuxtImg>
     </div>
   </Marquee>
-  <div class="grid lg:grid-cols-3 w-full" v-else>
+  <div class="grid grid-cols-3 w-full" v-else>
     <div v-for="companie in companieLogos" class="flex items-center justify-center">
       <NuxtImg
         class="w-48 hover:scale-110 hover:grayscale-0 transition-transform duration-300 cursor-pointer"
