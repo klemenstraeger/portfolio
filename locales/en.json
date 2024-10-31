@@ -15,16 +15,19 @@
     "intro2": "a graduate in Business Informatics",
     "intro3": "and an enthusiastic",
     "intro4": "Fullstack Developer",
-    "intro5": "with a passion for Vue.js and Nuxt.js."
+    "intro5": "with a passion for"
   },
   "seoServerMeta": {
     "description": "Portfolio of Klemens Traeger",
     "ogDescription": "Portfolio of Klemens Traeger"
   },
+  "companies": {
+    "header": "Companies I worked for"
+  },
   "cv": {
     "header": "Curriculum Vitae",
     "entry1": {
-      "timeFrame": "08/2023 - now",
+      "timeFrame": "08/2023 - 06/2024",
       "title": "Software Developer (Working Student)",
       "text": "Otto Group Solution Provider Dresden"
     },
@@ -39,7 +42,7 @@
       "text": "University of Applied Sciences Dresden (FH), Final Grade: 1.7"
     },
     "entry4": {
-      "title": "Working Student",
+      "title": "Working student",
       "timeFrame": "05/2019 - 09/2021",
       "text": "Energiewerk Ost GmbH <br> • Google & Bing Ads scripts & management<br> • Product text creation with AX Semantics<br> • Automation of budget control"
     },
@@ -52,6 +55,11 @@
       "timeFrame": "08/2010 - 06/2018",
       "title": "High school diploma",
       "text": "'Glückauf'-Gymnasium Dippoldiswalde final grade 2.7"
+    },
+    "entry0": {
+      "timeFrame": "07/2024 - now",
+      "title": "Software-Engineer",
+      "text": "Otto Group Solution Provider, Dresden.<br> Currently active as an AI-Engineer, building LLM based Chatbots."
     }
   },
   "skillAndTechnologies": {

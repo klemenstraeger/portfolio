@@ -10,7 +10,7 @@
     "intro2": "Wirtschaftsinformatik",
     "intro3": "und begeisterter",
     "intro4": "Fullstack-Entwickler",
-    "intro5": "mit einer Leidenschaft für Vue.js und Nuxt.js.",
+    "intro5": "mit einer Vorliebe für",
     "keySkills": {
       "skill1": "Frontend-Entwicklung",
       "skill2": "Backend-Entwicklung",
@@ -24,35 +24,40 @@
   "cv": {
     "entry1": {
       "text": "Otto Group Solution Provider Dresden",
-      "timeFrame": "08.2023 - jetzt",
+      "timeFrame": " August 2023 -  Juni 2024",
       "title": "Softwareentwickler (Werkstudent)"
     },
     "entry2": {
       "text": "WEBneo GmbH, Dresden<br>• Shopware 6 Plugin-Entwicklung mit Vue.js<br> • Shopware Store-Anpassung und Template-Implementierung<br> • Entwicklung Interner Tools mit Vue.js und PHP",
-      "timeFrame": "09.2021 - 02.2022",
+      "timeFrame": "September 2021 - Februar 2022",
       "title": "Praktikum Frontend-/Backend-Entwickler"
     },
     "entry3": {
       "text": "Fachhochschule Dresden (FH), Abschlussnote 1.7",
-      "timeFrame": "10.2019 – 05.2024",
+      "timeFrame": "Oktober 2019 – Mai 2024",
       "title": "Studium der Wirtschaftsinformatik (Diplom)"
     },
     "entry4": {
       "text": "Energiewerk Ost GmbH <br>\n• Google & Bing Ads Scripts & Management<br> \n• Produkttexterstellung mit AX Semantics<br> \n• Automatisierung der Budgetkontrolle",
       "title": "Werksstudent",
-      "timeFrame": "05.2019 - 09.2021"
+      "timeFrame": "Mai 2019 - Juli 2023"
     },
     "entry5": {
       "text": "Neuseeland",
-      "timeFrame": "10.2018 - 02.2019",
+      "timeFrame": "Oktober 2018 - Februar 2019",
       "title": "Auslandsjahr, Work & Travel"
     },
     "entry6": {
       "text": "\"Glückauf-Gymnasium\" Dippoldiswalde Abschlussnote 2.7",
-      "timeFrame": "08.2010 - 06.2018",
+      "timeFrame": "August 2010 - Juni 2018",
       "title": "Abitur"
     },
-    "header": "Lebenslauf"
+    "header": "Lebenslauf",
+    "entry0": {
+      "timeFrame": "Juli 2024 - jetzt",
+      "title": "Software-Engineer",
+      "text": "Otto Group Solution Provider GmbH, Dresden. <br><br>  • Entwicklung von LLM-basierten Chatbots. Unter anderem als Shopping/Knwoledgebot für Manufactum."
+    }
   },
   "projects": {
     "entry1": {
@@ -111,5 +116,8 @@
         "text": "Grundwissen"
       }
     }
+  },
+  "companies": {
+    "header": "Firmen für die ich gearbeitet habe"
   }
 }

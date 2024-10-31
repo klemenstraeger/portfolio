@@ -28,6 +28,19 @@
           >{{ $t("intro.intro4") }}</span
         >
         {{ $t("intro.intro5") }}
+        <FlipWords
+          :words="[
+            'Vue.js.',
+            'Nuxt.',
+            'Python.',
+            'Typescript.',
+            'TailwindCSS.',
+            'FastAPI.',
+            'Nitro.js.',
+          ]"
+          letterClass="text-transparent bg-clip-text bg-gradient-to-l from-emerald-500 to-lime-600 font-bold italic"
+          :duration="3000"
+        />
       </div>
       <div class="mt-8 lg:mt-12 lg:gap-x-2 flex flex-col items-center lg:flex-row">
         <Tag
@@ -56,9 +69,11 @@
       />
     </div>
   </div>
-  <div class="flex flex-col gap-y-32">
+  <div class="flex flex-col gap-y-14 xl:gap-y-20">
     <CurriculiumVitae />
+    <Componies />
     <SkillsAndTechnologies />
+
     <Projects />
   </div>
   <!-- <TheNavigation /> -->
@@ -75,9 +90,14 @@ onMounted(() => {
 
 const birthDate = new Date(1999, 6, 22); // 22 July 1999 (months are 0-indexed)
 
-const age = computed(() => 
-  new Date().getFullYear() - birthDate.getFullYear() - 
-  (new Date() < new Date(new Date().getFullYear(), birthDate.getMonth(), birthDate.getDate()) ? 1 : 0)
+const age = computed(
+  () =>
+    new Date().getFullYear() -
+    birthDate.getFullYear() -
+    (new Date() <
+    new Date(new Date().getFullYear(), birthDate.getMonth(), birthDate.getDate())
+      ? 1
+      : 0)
 );
 
 const keySkills = [

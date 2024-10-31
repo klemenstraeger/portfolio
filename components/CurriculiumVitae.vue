@@ -45,6 +45,12 @@ const { t } = useI18n();
 
 const cvEntries = [
   {
+    timeFrame: t("cv.entry0.timeFrame"),
+    title: t("cv.entry0.title"),
+    text: t("cv.entry0.text"),
+    icon: "material-symbols:work-outline",
+  },
+  {
     timeFrame: t("cv.entry1.timeFrame"),
     title: t("cv.entry1.title"),
     text: t("cv.entry1.text"),
@@ -63,7 +69,7 @@ const cvEntries = [
     icon: "mdi:account-school",
   },
   {
-    timeFrame: t("cv.entry4.title"),
+    timeFrame: t("cv.entry4.timeFrame"),
     title: t("cv.entry4.title"),
     text: t("cv.entry4.text"),
     icon: "material-symbols:work-outline",

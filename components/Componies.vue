@@ -1,0 +1,52 @@
+<template>
+  <!-- First Marquee -->
+  <h3 class="lg:text-5xl text-3xl mx-4 md:mx-0 text-white font-semibold -mb-2">
+    {{ $t("companies.header") }}
+  </h3>
+  <Marquee
+    pauseOnHover
+    class="[--duration:20s] w-full"
+    v-if="breakpoints.smaller('md').value"
+  >
+    <div v-for="companie in companieLogos" class="flex items-center justify-center">
+      <NuxtImg
+        class="h-28 w-40 mx-6 object-contain"
+        :class="companie.active ? '' : 'grayscale'"
+        :src="companie.src"
+      ></NuxtImg>
+    </div>
+  </Marquee>
+  <div class="grid lg:grid-cols-3 w-full" v-else>
+    <div v-for="companie in companieLogos" class="flex items-center justify-center">
+      <NuxtImg
+        class="w-48 hover:scale-110 hover:grayscale-0 transition-transform duration-300 cursor-pointer"
+        :class="companie.active ? '' : 'grayscale'"
+        :src="companie.src"
+      ></NuxtImg>
+    </div>
+  </div>
+  <!-- </Marquee> -->
+</template>
+
+<script lang="ts" setup>
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
+
+const breakpoints = useBreakpoints(breakpointsTailwind);
+
+const companieLogos = [
+  {
+    src: "https://www.ofenseite.com/bilder/intern/shoplogo/ofenseite_logo_300px.webp",
+    active: false,
+  },
+  {
+    src: "https://www.webneo.de/wp-content/uploads/2023/08/wbn_logo_responsive_rgb.svg",
+    active: false,
+  },
+  {
+    src: "https://osp.my.onetrust.eu/cdn/cookies/logos/42600428-c0bd-4483-9cee-b81bfc62e42a/390ca807-c198-4a14-833f-ece2f6776be2/dfa0ca10-4d30-418f-a16e-27f2728ad98c/Logo-OSP_ohne_R.png",
+    active: false,
+  },
+];
+</script>
+
+<style></style>
