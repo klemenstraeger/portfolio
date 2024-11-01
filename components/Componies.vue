@@ -3,8 +3,12 @@
   <h3 class="lg:text-5xl text-3xl mx-4 md:mx-0 text-white font-semibold -mb-2">
     {{ $t("companies.header") }}
   </h3>
-  <Marquee pauseOnHover class="[--duration:20s] w-full" v-if="!isSm">
-    <div v-for="companie in companieLogos" class="flex items-center justify-center">
+  <Marquee pauseOnHover class="[--duration:20s] w-full" v-if="isSm">
+    <div
+      v-for="companie in companieLogos"
+      class="flex items-center justify-center"
+      :key="companie.src"
+    >
       <NuxtImg
         class="h-28 w-40 mx-6 object-contain"
         :class="companie.active ? '' : 'grayscale'"
@@ -13,7 +17,11 @@
     </div>
   </Marquee>
   <div class="grid grid-cols-3 w-full" v-else>
-    <div v-for="companie in companieLogos" class="flex items-center justify-center">
+    <div
+      v-for="companie in companieLogos"
+      class="flex items-center justify-center"
+      :key="companie.src"
+    >
       <NuxtImg
         class="w-48 hover:scale-110 hover:grayscale-0 transition-transform duration-300 cursor-pointer"
         :class="companie.active ? '' : 'grayscale'"
@@ -21,11 +29,15 @@
       ></NuxtImg>
     </div>
   </div>
-  <!-- </Marquee> -->
 </template>
 
 <script lang="ts" setup>
-const isSm = useMediaQuery("(min-width: 640px)");
+import { breakpointsTailwind, useBreakpoints } from "@vueuse/core";
+const isSm = ref<boolean>(false);
+
+onMounted(() => {
+  isSm.value = useBreakpoints(breakpointsTailwind).smallerOrEqual("sm").value;
+});
 
 const companieLogos = [
   {
