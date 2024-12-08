@@ -1,20 +1,18 @@
 <template>
-  <div class="min-h-[50vh] mx-4 md:mx-0" id="projects">
-    <div class="ml-auto lg:text-5xl mb-4 lg:mb-8 text-3xl text-white font-semibold">
-      {{ $t("projects.header") }}
-    </div>
+  <div id="projects" class="min-h-[50vh] mx-4 md:mx-0">
     <div class="flex flex-col gap-12">
       <div
-        class="relative block rounded-lg p-4 sm:p-6 lg:p-8 bg-gray-900"
         v-for="(project, index) in projects"
+        :key="index"
+        class="relative block rounded-lg p-4 sm:p-6 lg:p-8 bg-slate-900"
       >
         <div class="flex items-center justify-between">
           <h1 class="text-emerald-500 text-xl md:text-3xl font-extrabold">
             {{ project.title }}
           </h1>
-          <NuxtLink :href="project.repo" target="_blank" v-if="project.repo"
-            ><Icon class="text-white text-3xl" name="mdi:github"></Icon
-          ></NuxtLink>
+          <NuxtLink v-if="project.repo" :href="project.repo" target="_blank"
+            ><Icon class="text-white text-3xl" name="mdi:github"
+          /></NuxtLink>
         </div>
         <div class="grid xl:grid-cols-2 xl:grid-rows-2 xl:gap-x-12">
           <div class="w-full space-y-4 lg:row-start-1">
@@ -32,20 +30,22 @@
             keyboard
           >
             <nuxt-img
+              v-for="img in project.images"
+              :key="img"
               :alt="project.title"
               format="webp"
               loading="lazy"
               quality="100"
-              v-for="img in project.images"
               class="mt-4 rounded-md !w-full md:h-[400px] object-contain xl:object-scale-down"
               :src="img"
             />
           </n-carousel>
           <div class="flex flex-wrap md:gap-3 mt-4 xl:row-start-2 h-fit justify-self-end">
             <Tag
+              v-for="technologie in project.usedTechnologies"
+              :key="technologie.name"
               :icon="technologie.icon"
               :border-color="technologie.color"
-              v-for="technologie in project.usedTechnologies"
               class="h-fit"
             >
               {{ technologie.name }}</Tag
@@ -246,7 +246,6 @@ const projects = [
     ],
   },
 ];
-const test = "test";
 </script>
 
 <style>

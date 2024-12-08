@@ -5,6 +5,11 @@
     "introSentenceHighlight": "Wirtschaftsinformatik",
     "yearsOld": "Ich bin {0} Jahre alt  und studiere "
   },
+  "heroSection": {
+    "ghCommits": "Beiträge zu Repositories in {year}.",
+    "ghRepos": "Öffentliche Repositories auf GitHub",
+    "ghPullRequests": "Erstellte Pull Requests in {year}."
+  },
   "intro": {
     "intro1": "Ich bin {0} Jahre alt, Absolvent der",
     "intro2": "Wirtschaftsinformatik",
@@ -22,42 +27,72 @@
     "ogDescription": "Portfolio von Klemens Traeger"
   },
   "cv": {
-    "entry1": {
-      "text": "Otto Group Solution Provider Dresden",
-      "timeFrame": " August 2023 -  Juni 2024",
-      "title": "Softwareentwickler (Werkstudent)"
-    },
-    "entry2": {
-      "text": "WEBneo GmbH, Dresden<br>• Shopware 6 Plugin-Entwicklung mit Vue.js<br> • Shopware Store-Anpassung und Template-Implementierung<br> • Entwicklung Interner Tools mit Vue.js und PHP",
-      "timeFrame": "September 2021 - Februar 2022",
-      "title": "Praktikum Frontend-/Backend-Entwickler"
-    },
-    "entry3": {
-      "text": "Fachhochschule Dresden (FH), Abschlussnote 1.7",
-      "timeFrame": "Oktober 2019 – Mai 2024",
-      "title": "Studium der Wirtschaftsinformatik (Diplom)"
-    },
-    "entry4": {
-      "text": "Energiewerk Ost GmbH <br>\n• Google & Bing Ads Scripts & Management<br> \n• Produkttexterstellung mit AX Semantics<br> \n• Automatisierung der Budgetkontrolle",
-      "title": "Werksstudent",
-      "timeFrame": "Mai 2019 - Juli 2023"
-    },
-    "entry5": {
-      "text": "Neuseeland",
-      "timeFrame": "Oktober 2018 - Februar 2019",
-      "title": "Auslandsjahr, Work & Travel"
-    },
-    "entry6": {
-      "text": "\"Glückauf-Gymnasium\" Dippoldiswalde Abschlussnote 2.7",
-      "timeFrame": "August 2010 - Juni 2018",
-      "title": "Abitur"
-    },
     "header": "Lebenslauf",
-    "entry0": {
-      "timeFrame": "Juli 2024 - jetzt",
-      "title": "Software-Engineer",
-      "text": "Otto Group Solution Provider GmbH, Dresden. <br><br>  • Entwicklung von LLM-basierten Chatbots. Unter anderem als Shopping/Knwoledgebot für Manufactum."
-    }
+    "entries": [
+      {
+        "timeFrame": "Juli 2024 - jetzt",
+        "title": "Software-Developer",
+        "company": "Otto Group Solution Provider",
+        "location": "Dresden",
+        "keypoints": ["Entwicklung von LLM-basierten Chatbots."]
+      },
+      {
+        "company": "Otto Group Solution Provider",
+        "location": "Dresden",
+        "timeFrame": " August 2023 -  Juni 2024",
+        "title": "Software-Developer (Werkstudent)",
+        "keypoints": [
+          "Frontend-Entwickler mit React.js + Superset für LKSG Projekt",
+          "Diplomarbeit: Entwicklung eines Prediction Service (UI + Vorhersage-Service)."
+        ]
+      },
+      {
+        "timeFrame": "September 2021 - Februar 2022",
+        "title": "Praktikum Fullstack Entwickler",
+        "company": "WEBneo GmbH",
+        "location": "Dresden",
+        "keypoints": [
+          "Entwicklung eines Shopware 6 Plugins mit Vue.js",
+          "Shopware Store-Anpassung und Template-Implementierung",
+          "Entwicklung interner Tools mit Vue.js und PHP"
+        ]
+      },
+      {
+        "text": "Fachhochschule Dresden (FH), Abschlussnote 1.7",
+        "timeFrame": "Oktober 2019 – Mai 2024",
+        "title": "Studium der Wirtschaftsinformatik (Diplom)",
+        "company": "Hochschule für Technik und Wirtschaft (FH)",
+        "location": "Dresden",
+        "keypoints": [
+          "Abschlussnote: 1.7",
+          "Abschlussarbeit: Einsatz von ML-Techniken zur erleichterten  Zuordnung von Kundenwarengruppen zu Sektoren des Lieferkettensorgfaltspflichtengesetzes"
+        ]
+      },
+      {
+        "timeFrame": "Mai 2019 - Juli 2021",
+        "title": "Werksstudent",
+        "company": "Energiewerk Ost GmbH",
+        "location": "Klingenberg (Sachsen)",
+        "keypoints": [
+          "Google & Bing Ads Scripts & Management",
+          "Produkttexterstellung mit AX Semantics",
+          "Automatisierung der SEA-Budgetsteuerung"
+        ]
+      },
+      {
+        "timeFrame": "Oktober 2018 - Februar 2019",
+        "title": "Auslandsjahr",
+        "company": "Work & Travel",
+        "location": "Neuseeland"
+      },
+      {
+        "timeFrame": "August 2010 - Juni 2018",
+        "title": "Abitur",
+        "company": "Glückauf-Gymnasium",
+        "location": "Dippoldiswalde",
+        "keypoints": ["Leistungskurse: Mathematik & Englisch"]
+      }
+    ]
   },
   "projects": {
     "entry1": {

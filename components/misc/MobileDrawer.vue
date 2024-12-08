@@ -1,5 +1,5 @@
 <template>
-  <div v-show="drawerOpen" class="fixed inset-0 z-50 backdrop-blur-sm"></div>
+  <div v-show="drawerOpen" class="fixed inset-0 z-50 backdrop-blur-sm"/>
 
   <!-- drawer component -->
   <div

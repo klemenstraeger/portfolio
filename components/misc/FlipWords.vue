@@ -11,8 +11,7 @@ const props = withDefaults(defineProps<Props>(), {
   class: "",
   letterClass: "",
 });
-
-console.log(props);
+defineEmits(["animationComplete"]);
 const currentWord = ref(props.words[0]);
 const isVisible = ref(true);
 const timeoutId = ref<number | null>(null);

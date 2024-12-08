@@ -5,6 +5,11 @@
     "introSentenceHighlight": "Business Informatics student",
     "introSentence": "studying at the Hochschule für Technik und Wirtschaft (HTW) in Dresden."
   },
+  "heroSection": {
+    "ghCommits": "Contributions to repositories in {year}.",
+    "ghRepos": "Public Repositories on GitHub",
+    "ghPullRequests": "Opened PRs across Projects in {year}."
+  },
   "intro": {
     "keySkills": {
       "skill1": "Frontend Development",
@@ -26,41 +31,70 @@
   },
   "cv": {
     "header": "Curriculum Vitae",
-    "entry1": {
-      "timeFrame": "08/2023 - 06/2024",
-      "title": "Software Developer (Working Student)",
-      "text": "Otto Group Solution Provider Dresden"
-    },
-    "entry2": {
-      "timeFrame": "09/2021 - 02/2022",
-      "title": "Internship Frontend / Backend Developer",
-      "text": "WEBneo GmbH, Dresden<br>• Shopware 6 plugin development with Vue.js<br> • Shopware store customization and template implementation<br> • Internal tools development with Vue.js and PHP"
-    },
-    "entry3": {
-      "timeFrame": "10/2019 - 05/2024",
-      "title": "Study of Business Informatics (Diploma)",
-      "text": "University of Applied Sciences Dresden (FH), Final Grade: 1.7"
-    },
-    "entry4": {
-      "title": "Working student",
-      "timeFrame": "05/2019 - 09/2021",
-      "text": "Energiewerk Ost GmbH <br> • Google & Bing Ads scripts & management<br> • Product text creation with AX Semantics<br> • Automation of budget control"
-    },
-    "entry5": {
-      "timeFrame": "10/2018 - 02/2019",
-      "title": "Gap Year, Work and Travel",
-      "text": "New Zealand"
-    },
-    "entry6": {
-      "timeFrame": "08/2010 - 06/2018",
-      "title": "High school diploma",
-      "text": "'Glückauf'-Gymnasium Dippoldiswalde final grade 2.7"
-    },
-    "entry0": {
-      "timeFrame": "07/2024 - now",
-      "title": "Software-Engineer",
-      "text": "Otto Group Solution Provider, Dresden.<br> Currently active as an AI-Engineer, building LLM based Chatbots."
-    }
+    "entries": [
+      {
+        "timeFrame": "July 2024 - Present",
+        "title": "Software Developer",
+        "company": "Otto Group Solution Provider",
+        "location": "Dresden",
+        "keypoints": ["Development of LLM-based chatbots."]
+      },
+      {
+        "timeFrame": "August 2023 - June 2024",
+        "title": "Software Developer (Working Student)",
+        "company": "Otto Group Solution Provider",
+        "location": "Dresden",
+        "keypoints": [
+          "Frontend development using React.js + Superset for the LKSG project.",
+          "Diploma thesis: Development of a prediction service (UI + prediction service)."
+        ]
+      },
+      {
+        "timeFrame": "September 2021 - February 2022",
+        "title": "Internship: Fullstack Developer",
+        "company": "WEBneo GmbH",
+        "location": "Dresden",
+        "keypoints": [
+          "Development of a Shopware 6 plugin using Vue.js.",
+          "Shopware store customization and template implementation.",
+          "Development of internal tools using Vue.js and PHP."
+        ]
+      },
+      {
+        "timeFrame": "October 2019 – May 2024",
+        "title": "Business Informatics (Diploma)",
+        "company": "University of Applied Sciences",
+        "location": "Dresden",
+        "keypoints": [
+          "Final grade: 1.7",
+          "Thesis: Application of ML techniques to simplify the assignment of customer product groups to sectors of the German Supply Chain Due Diligence Act."
+        ]
+      },
+      {
+        "timeFrame": "May 2019 - July 2021",
+        "title": "Working Student",
+        "company": "Energiewerk Ost GmbH",
+        "location": "Klingenberg (Saxony)",
+        "keypoints": [
+          "Google & Bing Ads scripts and management.",
+          "Product text creation with AX Semantics.",
+          "Automation of SEA budget control."
+        ]
+      },
+      {
+        "timeFrame": "October 2018 - February 2019",
+        "title": "Gap Year",
+        "company": "Work & Travel",
+        "location": "New Zealand"
+      },
+      {
+        "timeFrame": "August 2010 - June 2018",
+        "title": "Abitur",
+        "company": "Glückauf-Gymnasium",
+        "location": "Dippoldiswalde",
+        "keypoints": ["Advanced courses: Mathematics & English."]
+      }
+    ]
   },
   "skillAndTechnologies": {
     "header": "Skills & Technologies",

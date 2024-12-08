@@ -1,32 +1,28 @@
 <template>
-  <!-- First Marquee -->
-  <h3 class="lg:text-5xl text-3xl mx-4 md:mx-0 text-white font-semibold -mb-2">
-    {{ $t("companies.header") }}
-  </h3>
-  <Marquee pauseOnHover class="[--duration:20s] w-full" v-if="isSm">
+  <Marquee v-if="isSm" pause-on-hover class="[--duration:20s] w-full">
     <div
       v-for="companie in companieLogos"
-      class="flex items-center justify-center"
       :key="companie.src"
+      class="flex items-center justify-center"
     >
       <NuxtImg
         class="h-28 w-40 mx-6 object-contain"
         :class="companie.active ? '' : 'grayscale'"
         :src="companie.src"
-      ></NuxtImg>
+      />
     </div>
   </Marquee>
-  <div class="grid grid-cols-3 w-full" v-else>
+  <div v-else class="grid grid-cols-3 w-full">
     <div
       v-for="companie in companieLogos"
-      class="flex items-center justify-center"
       :key="companie.src"
+      class="flex items-center justify-center"
     >
       <NuxtImg
         class="w-48 hover:scale-110 hover:grayscale-0 transition-transform duration-300 cursor-pointer"
         :class="companie.active ? '' : 'grayscale'"
         :src="companie.src"
-      ></NuxtImg>
+      />
     </div>
   </div>
 </template>

@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {
+    ghToken: "",
+  },
   modules: [
     "@nuxtjs/tailwindcss",
     "nuxt-icon",
@@ -10,6 +13,8 @@ export default defineNuxtConfig({
     "nuxt-headlessui",
     "@pinia/nuxt",
     "@nuxtjs/i18n",
+    "@nuxtjs/eslint-module",
+    "@nuxt/eslint",
   ],
 
   nitro: {
@@ -35,7 +40,12 @@ export default defineNuxtConfig({
       alwaysRedirect: false,
     },
   },
-
+  components: [
+    {
+      pathPrefix: false,
+      path: "~/components",
+    },
+  ],
   devtools: {
     enabled: true,
   },

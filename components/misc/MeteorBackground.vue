@@ -9,7 +9,7 @@
         animationDelay: `${meteor.delay}s`,
         animationDuration: `${meteor.duration}s`,
       }"
-    ></span>
+    />
   </div>
 </template>
 
@@ -22,7 +22,7 @@ const props = defineProps({
 });
 
 const meteors = computed(() => {
-  return Array.from({ length: props.number }, (_, idx) => ({
+  return Array.from({ length: props.number }, (_) => ({
     left: Math.floor(Math.random() * (400 - -400) + -800),
     bottom: Math.floor(Math.random() * (100 - 0) + 900),
     delay: Math.random() * 10 - 8,

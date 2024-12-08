@@ -8,7 +8,12 @@
       </div>
     </NuxtLink>
     <div class="lg:gap-6 gap-2 items-center hidden lg:flex">
-      <NuxtLink :to="link.to" v-for="link in links" :target="link.target">
+      <NuxtLink
+        v-for="link in links"
+        :key="link.name"
+        :to="link.to"
+        :target="link.target"
+      >
         <Icon
           :name="link.name"
           :size="!isSm ? '2rem' : '2.5rem'"
