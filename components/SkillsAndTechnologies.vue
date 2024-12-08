@@ -1,14 +1,15 @@
 <template>
-  <div class="min-h-[50vh] mx-4 md:mx-0" id="skills">
-    <h1 class="ml-auto lg:text-5xl text-3xl text-white font-semibold mb-4 lg:mb-6">
-      {{ $t("skillAndTechnologies.header") }}
-    </h1>
-
+  <div id="skills" class="min-h-[50vh] mx-4 md:mx-0">
     <div class="grid gap-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
       <div
-        class="relative block rounded-b-lg border-t-4 p-4 sm:p-6 lg:p-8 bg-gray-900 hover:scale-105 transition-transform duration-500 ease-in-out"
-        :class="'border-' + skill.color"
-        v-for="skill in skills"
+        v-for="(skill, index) in skills"
+        :key="skill.title"
+        ref="skillElements"
+        class="relative block border-r-slate-800 border-b-slate-800 border border-l-slate-800 rounded-b-lg border-t-4 p-4 sm:p-6 lg:p-8 bg-slate-900 hover:scale-105 transition-transform duration-500 ease-in-out opacity-0"
+        :class="['border-' + skill.color, 'slide-in-element']"
+        :style="{
+          '--slide-delay': `${index * 100}ms`,
+        }"
       >
         <div class="gap-4">
           <h3
@@ -19,26 +20,47 @@
               color="white"
               size="3rem"
               class="hover:scale-110 transition duration-150 ease-in-out mr-4"
-            />{{ skill.title }}
+            />
+            {{ skill.title }}
           </h3>
         </div>
 
-        <p class="my-2 font-medium text-gray-500">
+        <p class="my-2 font-medium text-white">
           {{ skill.text }}
         </p>
-        <!-- <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-          <div
-            class="bg-blue-700 h-2.5 rounded-full loader"
-            :style="'width:' + skill.skillLevel + '%'"
-          ></div>
-        </div> -->
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { onMounted, ref } from "vue";
 const { t } = useI18n();
+
+const skillElements = ref<HTMLElement[]>([]);
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("slide-in-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: "50px",
+    }
+  );
+
+  skillElements.value.forEach((element) => {
+    if (element) {
+      observer.observe(element);
+    }
+  });
+});
 
 const skills = [
   {
@@ -48,7 +70,6 @@ const skills = [
     color: "pink-600",
     skillLevel: 80,
   },
-
   {
     title: t("skillAndTechnologies.skills.entry2.title"),
     icon: "logos:nuxt-icon",
@@ -115,4 +136,15 @@ const skills = [
 ];
 </script>
 
-<style scoped></style>
+<style scoped>
+.slide-in-element {
+  transform: translateY(50px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: var(--slide-delay);
+}
+
+.slide-in-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+</style>

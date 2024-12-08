@@ -4,10 +4,10 @@
 
     <NuxtLink href="https://nuxt.com/" target="_blank">
       build with
-      <Icon name="logos:nuxt-icon"></Icon>
+      <Icon name="logos:nuxt-icon"/>
     </NuxtLink>
 
-    <div class="text-white flex justify-center"></div>
+    <div class="text-white flex justify-center"/>
   </div>
 </template>
 

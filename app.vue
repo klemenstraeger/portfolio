@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout>
-    <RouterView></RouterView>
+    <NuxtPage />
   </NuxtLayout>
 </template>
 

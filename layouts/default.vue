@@ -6,13 +6,13 @@
         backgroundImage: `url('bg.svg?inline')`,
         backgroundSize: '100vw 110vh',
       }"
-    ></div>
+    />
     <MobileDrawer />
 
     <div class="z-10 relative">
       <div class="container mx-auto min-h-screen md:px-4 xl:px-0">
         <TheHeader />
-        <slot></slot>
+        <slot />
       </div>
       <n-back-top class="z-10" />
       <TheFooter />
@@ -20,11 +20,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import imagePath from "@/assets/bg.svg";
-import { useAppStore } from "~/stores/app-store";
-
-const appStore = useAppStore();
-</script>
+<script setup lang="ts"></script>
 
 <style></style>
