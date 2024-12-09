@@ -23,9 +23,11 @@
 </template>
 
 <script setup>
-import { GitBranch, GitCommit, GitPullRequest, Github } from "lucide-vue-next";
+import { GitCommit, GitPullRequest, Github } from "lucide-vue-next";
 
-const { data, pending, error, refresh } = useLazyFetch("/api/github/stats");
+const { data } = await useLazyAsyncData("github-stats", () =>
+  $fetch("/api/github/stats")
+);
 const { t } = useI18n();
 
 const stats = ref([
