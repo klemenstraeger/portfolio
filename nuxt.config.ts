@@ -4,6 +4,14 @@ export default defineNuxtConfig({
   runtimeConfig: {
     ghToken: "",
   },
+  nitro: {
+    storage: {
+      redis: {
+        driver: "redis",
+        url: process.env.REDIS_URL,
+      },
+    },
+  },
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxt/icon",
