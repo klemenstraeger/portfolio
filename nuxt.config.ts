@@ -1,11 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: "2024-12-10",
   runtimeConfig: {
     ghToken: "",
   },
   modules: [
     "@nuxtjs/tailwindcss",
-    "nuxt-icon",
+    "@nuxt/icon",
     "@vueuse/nuxt",
     "@bg-dev/nuxt-naiveui",
     "@nuxt/image-edge",
