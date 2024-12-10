@@ -10,9 +10,9 @@
           <h1 class="text-emerald-500 text-xl md:text-3xl font-extrabold">
             {{ project.title }}
           </h1>
-          <NuxtLink v-if="project.repo" :href="project.repo" target="_blank"
-            ><Icon class="text-white text-3xl" name="mdi:github"
-          /></NuxtLink>
+          <div class="flex items-center gap-x-4">
+            <Chip>{{ project.timespan }}</Chip>
+          </div>
         </div>
         <div class="grid xl:grid-cols-2 xl:grid-rows-2 xl:gap-x-12">
           <div class="w-full space-y-4 lg:row-start-1">
@@ -40,6 +40,14 @@
               :src="img"
             />
           </n-carousel>
+          <NuxtLink
+            v-if="project.repo"
+            :href="project.repo"
+            target="_blank"
+            class="text-white flex items-center gap-x-2"
+            ><Icon class="text-white text-3xl" name="mdi:github" /> GitHub
+            Repository</NuxtLink
+          >
           <div class="flex flex-wrap md:gap-3 mt-4 xl:row-start-2 h-fit justify-self-end">
             <Tag
               v-for="technologie in project.usedTechnologies"
@@ -63,6 +71,7 @@ const { t } = useI18n();
 const projects = [
   {
     title: t("projects.entry0.title"),
+    timespan: "2024",
     description: t("projects.entry0.text"),
     images: [
       "img/login.png",
@@ -121,6 +130,8 @@ const projects = [
   {
     title: t("projects.entry1.title"),
     description: t("projects.entry1.text"),
+    timespan: "2022 - 2023",
+
     repo: "https://github.com/htw-dresden-ps23/trommelhelden-web-frontend",
     images: [
       "/img/trommelhelden.png",
@@ -186,6 +197,8 @@ const projects = [
   {
     title: t("projects.entry2.title"),
     description: t("projects.entry2.text"),
+    timespan: "2022 - 2023",
+
     images: [
       "/img/ewo-login.png",
       "/img/ewo-budgetmanager.png",

@@ -1,5 +1,21 @@
 <template>
   <div id="skills" class="min-h-[50vh] mx-4 md:mx-0">
+    <div class="flex flex-wrap gap-2">
+      <div
+        v-for="category in categories"
+        :key="category"
+        :class="[
+          'px-4 py-2 rounded-md min-w-[100px]',
+          selectedCategory === category
+            ? 'bg-primary text-primary-foreground'
+            : 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+        ]"
+        @click="selectedCategory = category"
+      >
+        <div v-if="category !== 'All'" class="inline-block mr-2 h-4 w-4" />
+        {{ category }}
+      </div>
+    </div>
     <div class="grid gap-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
       <div
         v-for="(skill, index) in skills"
@@ -38,6 +54,9 @@ import { onMounted, ref } from "vue";
 const { t } = useI18n();
 
 const skillElements = ref<HTMLElement[]>([]);
+
+const categories = [{}];
+const selectedCategory = ref("All");
 
 onMounted(() => {
   const observer = new IntersectionObserver(

@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     ghToken: "",
   },
+
   nitro: {
     storage: {
       redis: {
@@ -24,6 +25,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/eslint-module",
     "@nuxt/eslint",
+    "@nuxtjs/seo",
   ],
 
   i18n: {
