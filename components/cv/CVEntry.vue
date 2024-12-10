@@ -1,8 +1,8 @@
 <template>
   <div
-    class="bg-slate-900 border border-slate-800 overflow-hidden order-1 border-t-4 w-full md:w-5/12 px-4 py-4 text-left rounded-b-lg border-t-emerald-600"
+    class="bg-slate-900 border border-slate-800 overflow-hidden order-1 border-t-4 w-full md:w-5/12 lg:px-4 py-4 text-left rounded-b-lg border-t-emerald-600"
   >
-    <div class="border-b border-slate-800 p-6">
+    <div class="border-b border-slate-800 p-4 lg:p-6">
       <div class="flex items-start justify-between">
         <div>
           <Chip>
