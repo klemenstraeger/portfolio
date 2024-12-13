@@ -17,7 +17,7 @@ export default defineCachedEventHandler(
     };
   },
   {
-    maxAge: 60 * 60 * 24, // 24 hours
+    maxAge: 60 * 60 * 72, // 72 hours
     base: "redis",
   }
 );

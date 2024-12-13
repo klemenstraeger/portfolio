@@ -27,15 +27,7 @@
         >
         {{ $t("intro.intro5") }}
         <FlipWords
-          :words="[
-            'Vue.js.',
-            'Nuxt.js.',
-            'Python.',
-            'Typescript.',
-            'TailwindCSS.',
-            'FastAPI.',
-            'Nitro.js.',
-          ]"
+          :words="flipWords"
           letter-class="text-transparent bg-clip-text bg-gradient-to-l from-emerald-500 to-lime-600 font-bold italic"
           :duration="3000"
         />
@@ -59,8 +51,6 @@
 </template>
 
 <script lang="ts" setup>
-const { t } = useI18n();
-
 const active = ref(0);
 const birthDate = new Date(1999, 6, 22); // 22 July 1999 (months are 0-indexed)
 
@@ -80,6 +70,19 @@ onMounted(() => {
   }, 3000);
 });
 
+const flipWords = ref([
+  "Vue.js.",
+  "Drum & Bass.",
+  "Nuxt.js.",
+  "Python.",
+  "Typescript.",
+  "FC Arsenal.",
+  "Google Cloud.",
+  "TailwindCSS.",
+  "Pizza.",
+  "FastAPI.",
+  "Nitro.js.",
+]);
 // const keySkills = [
 //   {
 //     title: t("intro.keySkills.skill1"),

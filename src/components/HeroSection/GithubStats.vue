@@ -3,8 +3,19 @@
     <div
       v-for="(stat, index) in stats"
       :key="index"
-      class="bg-slate-900 border border-[#30363d] rounded-lg p-4"
+      class="bg-slate-900 border border-[#30363d] rounded-lg p-4 relative hover:scale-105 transition-all duration-300 ease-in-out"
+      @mouseenter="stat.isHovered = true"
+      @mouseleave="stat.isHovered = false"
     >
+      <BorderBeam
+        v-if="stat.isHovered"
+        :size="100"
+        :duration="3"
+        :delay="0"
+        :border-width="2"
+        :colorFrom="colors.emerald[500]"
+        :colorTo="colors.lime[600]"
+      />
       <div class="flex items-center justify-between pb-2">
         <h3 class="text-sm font-medium text-gray-300">{{ stat.title }}</h3>
         <component :is="stat.icon" class="h-4 w-4" :class="stat.iconColor" />
@@ -24,6 +35,7 @@
 
 <script setup>
 import { GitCommit, GitPullRequest, Github } from "lucide-vue-next";
+import colors from "tailwindcss/colors";
 
 const { data } = await useLazyAsyncData("github-stats", () =>
   $fetch("/api/github/stats")
@@ -38,6 +50,7 @@ const stats = ref([
     icon: GitCommit,
     iconColor: "text-emerald-500",
     valueColor: "text-lime-600",
+    isHovered: false,
   },
   {
     title: "Pull Requests",
@@ -47,6 +60,7 @@ const stats = ref([
     icon: GitPullRequest,
     iconColor: "text-emerald-500",
     valueColor: "text-lime-600",
+    isHovered: false,
   },
   {
     title: "Repositories",
@@ -55,6 +69,7 @@ const stats = ref([
     icon: Github,
     iconColor: "text-emerald-500",
     valueColor: "text-lime-600",
+    isHovered: false,
   },
 ]);
 </script>
