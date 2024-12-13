@@ -1,42 +1,45 @@
-# Nuxt 3 Minimal Starter
+# Portfolio Website
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+![Portfolio Preview](img/image.png)
+
+A modern portfolio website built with Nuxt 3 that showcases my projects, skills, and experience.
+
+## Features
+
+- 🌍 Multilingual support (English/German)
+- 🎨 Modern design with TailwindCSS
+- ⚡️ Server-side rendering with Nuxt 3
+- 📱 Fully responsive layout
+- 📊 GitHub statistics integration
+- 🖼️ Image optimization with Nuxt Image
+- 🚀 Performance optimized
+
+## Tech Stack
+
+- [Nuxt 3](https://nuxt.com/) - Vue.js Framework
+- [TailwindCSS](https://tailwindcss.com/) - CSS Framework
+- [Inspira UI](https://inspira-ui.com/) - Component Library
+- [TypeScript](https://www.typescriptlang.org/) - Type Safety
+- [i18n](https://i18n.nuxtjs.org/) - Internationalization
 
 ## Setup
 
 Make sure to install the dependencies:
 
 ```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
 pnpm install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`
-
-```bash
-npm run dev
 ```
 
 ## Production
 
-Build the application for production:
+Build for production:
 
 ```bash
-npm run build
+pnpm build
 ```
 
-Locally preview production build:
+Preview production build:
 
 ```bash
-npm run preview
+pnpm preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
