@@ -76,12 +76,14 @@ const flipWords = ref([
   "Nuxt.js.",
   "Python.",
   "Typescript.",
-  "FC Arsenal.",
   "Google Cloud.",
   "TailwindCSS.",
   "Pizza.",
   "FastAPI.",
   "Nitro.js.",
+  "Supabase.",
+  "Vercel.",
+  "Apple.",
 ]);
 // const keySkills = [
 //   {
