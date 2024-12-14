@@ -8,7 +8,7 @@
       }"
     />
     <MobileDrawer />
-
+    <SpeedInsights />
     <div class="z-10 relative">
       <div class="container mx-auto min-h-screen md:px-4 xl:px-0">
         <TheHeader />
@@ -20,6 +20,8 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { SpeedInsights } from "@vercel/speed-insights/nuxt";
+</script>
 
 <style></style>
