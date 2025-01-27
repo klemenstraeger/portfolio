@@ -44,34 +44,36 @@ const { data } = await useLazyAsyncData(
 );
 const { t } = useI18n();
 
-const stats = ref([
-  {
-    title: "Commits",
-    value: data.value?.totalCommits.lastYear,
-    description: t("heroSection.ghCommits", { year: new Date().getFullYear() }),
-    icon: GitCommit,
-    iconColor: "text-emerald-500",
-    valueColor: "text-lime-600",
-    isHovered: false,
-  },
-  {
-    title: "Pull Requests",
-    value: data.value?.totalPRs,
-    description: t("heroSection.ghPullRequests", { year: new Date().getFullYear() }),
+const stats = computed(() => {
+  return [
+    {
+      title: "Commits",
+      value: data.value?.totalCommits.lastYear,
+      description: t("heroSection.ghCommits", { year: new Date().getFullYear() }),
+      icon: GitCommit,
+      iconColor: "text-emerald-500",
+      valueColor: "text-lime-600",
+      isHovered: false,
+    },
+    {
+      title: "Pull Requests",
+      value: data.value?.totalPRs,
+      description: t("heroSection.ghPullRequests", { year: new Date().getFullYear() }),
 
-    icon: GitPullRequest,
-    iconColor: "text-emerald-500",
-    valueColor: "text-lime-600",
-    isHovered: false,
-  },
-  {
-    title: "Repositories",
-    value: data.value?.totalRepos,
-    description: t("heroSection.ghRepos"),
-    icon: Github,
-    iconColor: "text-emerald-500",
-    valueColor: "text-lime-600",
-    isHovered: false,
-  },
-]);
+      icon: GitPullRequest,
+      iconColor: "text-emerald-500",
+      valueColor: "text-lime-600",
+      isHovered: false,
+    },
+    {
+      title: "Repositories",
+      value: data.value?.totalRepos,
+      description: t("heroSection.ghRepos"),
+      icon: Github,
+      iconColor: "text-emerald-500",
+      valueColor: "text-lime-600",
+      isHovered: false,
+    },
+  ];
+});
 </script>
