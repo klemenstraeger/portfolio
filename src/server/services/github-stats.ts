@@ -27,9 +27,9 @@ export async function getTotalPRs(year: number) {
   return total_count;
 }
 
-export async function getTotalCommits() {
+export async function getTotalCommits(year: number) {
   const { total: totalCommits } = await $fetch<Response>(
-    "https://github-contributions-api.jogruber.de/v4/klemenstraeger?y=last"
+    "https://github-contributions-api.jogruber.de/v4/klemenstraeger?y=" + year
   );
   return totalCommits;
 }

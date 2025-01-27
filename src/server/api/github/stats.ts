@@ -8,7 +8,7 @@ export default defineCachedEventHandler(
   async (event) => {
     const year = new Date().getFullYear();
     const totalPRs = await getTotalPRs(year);
-    const totalCommits = await getTotalCommits();
+    const totalCommits = await getTotalCommits(year);
     const totalRepos = await getTotalRepos();
     return {
       totalPRs,
