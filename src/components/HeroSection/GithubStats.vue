@@ -13,8 +13,8 @@
         :duration="3"
         :delay="0"
         :border-width="2"
-        :colorFrom="colors.emerald[500]"
-        :colorTo="colors.lime[600]"
+        :color-from="colors.emerald[500]"
+        :color-to="colors.lime[600]"
       />
       <div class="flex items-center justify-between pb-2">
         <h3 class="text-sm font-medium text-gray-300">{{ stat.title }}</h3>
@@ -37,8 +37,10 @@
 import { GitCommit, GitPullRequest, Github } from "lucide-vue-next";
 import colors from "tailwindcss/colors";
 
-const { data } = await useLazyAsyncData("github-stats", () =>
-  $fetch("/api/github/stats")
+const { data } = await useLazyAsyncData(
+  "github-stats",
+  () => $fetch("/api/github/stats"),
+  { server: false }
 );
 const { t } = useI18n();
 
