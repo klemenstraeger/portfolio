@@ -36,7 +36,7 @@
       <div
         class="mt-8 lg:mt-12 lg:gap-x-2 flex-col items-center justify-between lg:flex-row hidden lg:flex"
       >
-        <GithubStats />
+        <!-- <GithubStats /> -->
       </div>
     </div>
     <div class="md:ml-auto">
