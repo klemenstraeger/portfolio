@@ -3,6 +3,52 @@ const { t } = useI18n()
 
 const projects = [
   {
+    title: "Manufactum Shopping Bot",
+    description: t("projects.entry0.text"),
+    images: [
+      "/img/mf_shopping.png",
+      "/img/mf_shopping_2.png",
+
+    ],
+    usedTechnologies: [
+      {
+        name: "Python",
+        icon: "logos:python",
+        color: "border-blue-600",
+      },
+      {
+        name: "FastAPI",
+        icon: "devicon:fastapi",
+        color: "border-blue-600",
+      },
+      {
+        name: "Postgres with pgvector",
+        icon: "devicon:postgresql",
+        color: "border-emerald-600",
+      },
+      {
+        name: "OpenAI",
+        icon: "simple-icons:openai",
+        color: "border-emerald-600",
+      },
+      {
+        name: "Google Cloud Platform",
+        icon: "logos:google-cloud",
+        color: "border-emerald-600",
+      },
+      {
+        name: "Terraform",
+        icon: "devicon-plain:terraform",
+        color: "border-emerald-600",
+      },
+      {
+        name: "Redis",
+        icon: "devicon:redis",
+        color: "border-emerald-600",
+      },
+    ],
+  },
+  {
     title: t("projects.entry0.title"),
     description: t("projects.entry0.text"),
     images: [
@@ -49,7 +95,7 @@ const projects = [
       },
       {
         name: "OpenAI",
-        icon: "logos:openai-icon",
+        icon: "simple-icons:openai",
         color: "border-emerald-600",
       },
       {
@@ -227,20 +273,22 @@ const projects = [
               format="webp"
               loading="lazy"
               quality="100"
-              class="mt-4 rounded-md !w-full md:h-[400px] object-contain xl:object-scale-down"
+              class="mt-4 rounded !w-full md:h-[400px] object-contain xl:object-scale-down"
               :src="img"
             />
           </n-carousel>
-          <div class="flex flex-wrap md:gap-3 mt-4 xl:row-start-2 h-fit justify-self-end">
-            <Tag
-              v-for="technologie in project.usedTechnologies"
-              :key="technologie.name"
-              :icon="technologie.icon"
-              :border-color="technologie.color"
-              class="h-fit"
-            >
-              {{ technologie.name }}
-            </Tag>
+          <div>
+            <div class="flex flex-wrap md:gap-3 mt-4 xl:row-start-2 h-fit justify-self-end">
+              <Tag
+                v-for="technologie in project.usedTechnologies"
+                :key="technologie.name"
+                :icon="technologie.icon"
+                :border-color="technologie.color"
+                class="h-fit"
+              >
+                {{ technologie.name }}
+              </Tag>
+            </div>
           </div>
         </div>
       </div>

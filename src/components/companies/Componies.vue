@@ -17,7 +17,7 @@ const companieLogos = [
     active: false,
   },
   {
-    src: "https://osp.my.onetrust.eu/cdn/cookies/logos/42600428-c0bd-4483-9cee-b81bfc62e42a/390ca807-c198-4a14-833f-ece2f6776be2/dfa0ca10-4d30-418f-a16e-27f2728ad98c/Logo-OSP_ohne_R.png",
+    src: "https://www.og1o.com/_assets/625e2d6cb54141905b51c20d13baa45b/Images/oneo-logo.svg",
     active: false,
   },
 ]
