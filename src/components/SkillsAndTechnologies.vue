@@ -1,66 +1,32 @@
-<template>
-  <div id="skills" class="min-h-[50vh] mx-4 md:mx-0">
-    <div class="grid gap-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
-      <div
-        v-for="(skill, index) in skills"
-        :key="skill.title"
-        ref="skillElements"
-        class="relative block border-r-slate-800 border-b-slate-800 border border-l-slate-800 rounded-b-lg border-t-4 p-4 sm:p-6 lg:p-8 bg-slate-900 hover:scale-105 transition-transform duration-500 ease-in-out opacity-0"
-        :class="['border-' + skill.color, 'slide-in-element']"
-        :style="{
-          '--slide-delay': `${index * 100}ms`,
-        }"
-      >
-        <div class="gap-4">
-          <h3
-            class="lg:text-3xl text-lg font-bold text-white sm:text-4xl flex items-center"
-          >
-            <Icon
-              :name="skill.icon"
-              color="white"
-              size="3rem"
-              class="hover:scale-110 transition duration-150 ease-in-out mr-4"
-            />
-            {{ skill.title }}
-          </h3>
-        </div>
-
-        <p class="my-2 font-medium text-white">
-          {{ skill.text }}
-        </p>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
-const { t } = useI18n();
+import { onMounted, ref } from "vue"
 
-const skillElements = ref<HTMLElement[]>([]);
+const { t } = useI18n()
+
+const skillElements = ref<HTMLElement[]>([])
 
 onMounted(() => {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("slide-in-visible");
-          observer.unobserve(entry.target);
+          entry.target.classList.add("slide-in-visible")
+          observer.unobserve(entry.target)
         }
-      });
+      })
     },
     {
       threshold: 0.1,
       rootMargin: "50px",
-    }
-  );
+    },
+  )
 
   skillElements.value.forEach((element) => {
     if (element) {
-      observer.observe(element);
+      observer.observe(element)
     }
-  });
-});
+  })
+})
 
 const skills = [
   {
@@ -133,8 +99,43 @@ const skills = [
     color: "white",
     skillLevel: 40,
   },
-];
+]
 </script>
+
+<template>
+  <div id="skills" class="min-h-[50vh] mx-4 md:mx-0">
+    <div class="grid gap-6 lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+      <div
+        v-for="(skill, index) in skills"
+        :key="skill.title"
+        ref="skillElements"
+        class="relative block border-r-slate-800 border-b-slate-800 border border-l-slate-800 rounded-b-lg border-t-4 p-4 sm:p-6 lg:p-8 bg-slate-900 hover:scale-105 transition-transform duration-500 ease-in-out opacity-0 slide-in-element"
+        :class="[`border-${skill.color}`]"
+        :style="{
+          '--slide-delay': `${index * 100}ms`,
+        }"
+      >
+        <div class="gap-4">
+          <h3
+            class="lg:text-3xl text-lg font-bold text-white sm:text-4xl flex items-center"
+          >
+            <Icon
+              :name="skill.icon"
+              color="white"
+              size="3rem"
+              class="hover:scale-110 transition duration-150 ease-in-out mr-4"
+            />
+            {{ skill.title }}
+          </h3>
+        </div>
+
+        <p class="my-2 font-medium text-white">
+          {{ skill.text }}
+        </p>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .slide-in-element {

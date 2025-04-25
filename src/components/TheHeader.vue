@@ -1,3 +1,34 @@
+<script setup lang="ts">
+import { useAppStore } from "~/stores/app-store"
+
+const isSm = useMediaQuery("(min-width: 640px)")
+
+const appStore = useAppStore()
+
+const links = [
+  // {
+  //   name: "ic:outline-article",
+  //   to: "/blog",
+  //   target: "",
+  // },
+  {
+    name: "mdi:github",
+    to: "https://github.com/klemenstraeger",
+    target: "_blank",
+  },
+  {
+    name: "mdi:linkedin",
+    to: "https://www.linkedin.com/in/klemens-tr%C3%A4ger-003b68198/",
+    target: "_blank",
+  },
+  {
+    name: "ci:mail",
+    to: "mailto:contact@klemenstraeger.dev",
+    target: "_blank",
+  },
+]
+</script>
+
 <template>
   <div class="flex justify-between lg:py-12 py-4 mx-4 lg:mx-0 items-center">
     <NuxtLink to="/">
@@ -32,36 +63,5 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { useAppStore } from "~/stores/app-store";
-
-const isSm = useMediaQuery("(min-width: 640px)");
-
-const appStore = useAppStore();
-
-const links = [
-  // {
-  //   name: "ic:outline-article",
-  //   to: "/blog",
-  //   target: "",
-  // },
-  {
-    name: "mdi:github",
-    to: "https://github.com/klemenstraeger",
-    target: "_blank",
-  },
-  {
-    name: "mdi:linkedin",
-    to: "https://www.linkedin.com/in/klemens-tr%C3%A4ger-003b68198/",
-    target: "_blank",
-  },
-  {
-    name: "ci:mail",
-    to: "mailto:contact@klemenstraeger.dev",
-    target: "_blank",
-  },
-];
-</script>
 
 <style scoped></style>

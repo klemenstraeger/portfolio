@@ -35,10 +35,10 @@ module.exports = {
         },
       },
       animation: {
-        typing: "typing 5s steps(20) 1 alternate, blink 1s infinite",
+        "typing": "typing 5s steps(20) 1 alternate, blink 1s infinite",
         "meteor-effect": "meteor 10s linear infinite",
       },
     },
   },
   plugins: [require("tailwindcss-animated")],
-};
+}

@@ -1,3 +1,21 @@
+<script setup lang="ts">
+const props = defineProps({
+  number: {
+    type: Number,
+    default: 20,
+  },
+})
+
+const meteors = computed(() => {
+  return Array.from({ length: props.number }, _ => ({
+    left: Math.floor(Math.random() * (400 - -400) + -800),
+    bottom: Math.floor(Math.random() * (100 - 0) + 900),
+    delay: Math.random() * 10 - 8,
+    duration: Math.floor(Math.random() * (10 - 2) + 12),
+  }))
+})
+</script>
+
 <template>
   <div>
     <span
@@ -12,24 +30,6 @@
     />
   </div>
 </template>
-
-<script setup lang="ts">
-const props = defineProps({
-  number: {
-    type: Number,
-    default: 20,
-  },
-});
-
-const meteors = computed(() => {
-  return Array.from({ length: props.number }, (_) => ({
-    left: Math.floor(Math.random() * (400 - -400) + -800),
-    bottom: Math.floor(Math.random() * (100 - 0) + 900),
-    delay: Math.random() * 10 - 8,
-    duration: Math.floor(Math.random() * (10 - 2) + 12),
-  }));
-});
-</script>
 
 <style scoped>
 .meteor::before {

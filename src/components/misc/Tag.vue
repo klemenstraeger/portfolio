@@ -1,3 +1,30 @@
+<script setup lang="ts">
+export interface Props {
+  icon?: string
+  borderColor?: string
+  size?: "small" | "medium" | "large"
+}
+
+withDefaults(defineProps<Props>(), {
+  icon: "",
+  borderColor: "border-emerald-500",
+  size: "medium",
+})
+
+function getSize(size: string) {
+  switch (size) {
+    case "small":
+      return "text-xs"
+    case "medium":
+      return "text-base"
+    case "large":
+      return "text-lg"
+    default:
+      return "text-base"
+  }
+}
+</script>
+
 <template>
   <div
     :class="borderColor"
@@ -9,32 +36,5 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-export interface Props {
-  icon?: string;
-  borderColor?: string;
-  size?: "small" | "medium" | "large";
-}
-
-withDefaults(defineProps<Props>(), {
-  icon: "",
-  borderColor: "border-emerald-500",
-  size: "medium",
-});
-
-const getSize = (size: string) => {
-  switch (size) {
-    case "small":
-      return "text-xs";
-    case "medium":
-      return "text-base";
-    case "large":
-      return "text-lg";
-    default:
-      return "text-base";
-  }
-};
-</script>
 
 <style scoped></style>

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { SpeedInsights } from "@vercel/speed-insights/nuxt"
+</script>
+
 <template>
   <div class="bg-gray-950 h-full w-full">
     <div
@@ -19,9 +23,5 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { SpeedInsights } from "@vercel/speed-insights/nuxt";
-</script>
 
 <style></style>

@@ -1,3 +1,58 @@
+<script setup lang="ts">
+const container = ref<null | HTMLElement>(null)
+
+const beam = ref<null | HTMLElement>(null)
+const entryRefs = ref<(Element | ComponentPublicInstance)[]>([])
+function updateBeam() {
+  if (!beam.value || !container.value)
+    return
+
+  const containerTop = container.value.getBoundingClientRect().top
+  const containerHeight = container.value.scrollHeight
+  const viewportMiddle = window.innerHeight / 2
+
+  // Calculate the distance of the middle of the viewport from the top of the container
+  const scrollPosition = viewportMiddle - containerTop
+
+  // Calculate scroll percentage based on the position within the container
+  const scrollPercentage = Math.min(Math.max(scrollPosition / containerHeight, 0), 1)
+
+  beam.value.style.height = `${scrollPercentage * 100}%`
+}
+
+function observeEntries() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in-slide")
+        }
+        else {
+          entry.target.classList.remove("fade-in-slide")
+        }
+      })
+    },
+    { threshold: 0.1 },
+  )
+
+  entryRefs.value.forEach((entry) => {
+    if (entry) {
+      observer.observe((entry as ComponentPublicInstance).$el || entry)
+    }
+  })
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", updateBeam)
+  observeEntries()
+  updateBeam()
+})
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", updateBeam)
+})
+</script>
+
 <template>
   <div id="cv" class="relative">
     <MeteorBackground class="" />
@@ -47,59 +102,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-const container = ref<null | HTMLElement>(null);
-
-const beam = ref<null | HTMLElement>(null);
-const entryRefs = ref<(Element | ComponentPublicInstance)[]>([]);
-const updateBeam = () => {
-  if (!beam.value || !container.value) return;
-
-  const containerTop = container.value.getBoundingClientRect().top;
-  const containerHeight = container.value.scrollHeight;
-  const viewportMiddle = window.innerHeight / 2;
-
-  // Calculate the distance of the middle of the viewport from the top of the container
-  const scrollPosition = viewportMiddle - containerTop;
-
-  // Calculate scroll percentage based on the position within the container
-  const scrollPercentage = Math.min(Math.max(scrollPosition / containerHeight, 0), 1);
-
-  beam.value.style.height = `${scrollPercentage * 100}%`;
-};
-
-const observeEntries = () => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fade-in-slide");
-        } else {
-          entry.target.classList.remove("fade-in-slide");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  entryRefs.value.forEach((entry) => {
-    if (entry) {
-      observer.observe((entry as ComponentPublicInstance).$el || entry);
-    }
-  });
-};
-
-onMounted(() => {
-  window.addEventListener("scroll", updateBeam);
-  observeEntries();
-  updateBeam();
-});
-
-onUnmounted(() => {
-  window.removeEventListener("scroll", updateBeam);
-});
-</script>
 
 <style scoped>
 .glow-beam {

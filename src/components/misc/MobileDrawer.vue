@@ -1,5 +1,47 @@
+<script setup lang="ts">
+import { storeToRefs } from "pinia"
+import { useAppStore } from "~/stores/app-store"
+
+const appStore = useAppStore()
+
+const { drawerOpen } = storeToRefs(appStore)
+
+const isLocked = useScrollLock(document)
+
+watch(drawerOpen, (value) => {
+  isLocked.value = value
+})
+
+const links = [
+  //   {
+  //     name: "ic:outline-article",
+  //     to: "/blog",
+  //     target: "",
+  //     title: "Blog",
+  //   },
+  {
+    name: "mdi:github",
+    to: "https://github.com/klemenstraeger",
+    target: "_blank",
+    title: "Github",
+  },
+  {
+    name: "mdi:linkedin",
+    to: "https://www.linkedin.com/in/klemens-tr%C3%A4ger-003b68198/",
+    target: "_blank",
+    title: "LinkedIn",
+  },
+  {
+    name: "ci:mail",
+    to: "mailto:contact@klemenstraeger.dev",
+    target: "_blank",
+    title: "Mail",
+  },
+]
+</script>
+
 <template>
-  <div v-show="drawerOpen" class="fixed inset-0 z-50 backdrop-blur-sm"/>
+  <div v-show="drawerOpen" class="fixed inset-0 z-50 backdrop-blur-sm" />
 
   <!-- drawer component -->
   <div
@@ -46,47 +88,5 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { storeToRefs } from "pinia";
-import { useAppStore } from "~/stores/app-store";
-
-const appStore = useAppStore();
-
-const { drawerOpen } = storeToRefs(appStore);
-
-const isLocked = useScrollLock(document);
-
-watch(drawerOpen, (value) => {
-  isLocked.value = value;
-});
-
-const links = [
-  //   {
-  //     name: "ic:outline-article",
-  //     to: "/blog",
-  //     target: "",
-  //     title: "Blog",
-  //   },
-  {
-    name: "mdi:github",
-    to: "https://github.com/klemenstraeger",
-    target: "_blank",
-    title: "Github",
-  },
-  {
-    name: "mdi:linkedin",
-    to: "https://www.linkedin.com/in/klemens-tr%C3%A4ger-003b68198/",
-    target: "_blank",
-    title: "LinkedIn",
-  },
-  {
-    name: "ci:mail",
-    to: "mailto:contact@klemenstraeger.dev",
-    target: "_blank",
-    title: "Mail",
-  },
-];
-</script>
 
 <style scoped></style>

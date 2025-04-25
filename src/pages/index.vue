@@ -1,3 +1,19 @@
+<script setup lang="ts">
+const { t } = useI18n()
+
+useHead({
+  title: `klemenstraeger.dev `,
+})
+
+useSeoMeta({
+  title: "klemenstraeger.dev",
+  ogTitle: "klemenstraeger.dev",
+  description: t("seoServerMeta.description"),
+  ogDescription: t("seoServerMeta.ogDescription"),
+  ogImage: "img/headshot.webp",
+})
+</script>
+
 <template>
   <div class="space-y-14 lg:space-y-0">
     <HeroSection />
@@ -18,22 +34,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-const { t } = useI18n();
-
-useHead({
-  title: `klemenstraeger.dev `,
-});
-
-useServerSeoMeta({
-  title: "klemenstraeger.dev",
-  ogTitle: "klemenstraeger.dev",
-  description: t("seoServerMeta.description"),
-  ogDescription: t("seoServerMeta.ogDescription"),
-  ogImage: "img/headshot.webp",
-});
-</script>
 
 <style>
 .will-change-transform {

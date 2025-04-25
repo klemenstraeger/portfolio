@@ -1,10 +1,30 @@
+<script lang="ts" setup>
+import { cn } from "~/lib/utils"
+
+withDefaults(
+  defineProps<{
+    class?: string
+    reverse?: boolean
+    pauseOnHover?: boolean
+    vertical?: boolean
+    repeat?: number
+  }>(),
+  {
+    pauseOnHover: false,
+    vertical: false,
+    repeat: 4,
+    class: "",
+  },
+)
+</script>
+
 <template>
   <div
     :class="
       cn(
         'group flex overflow-hidden p-2 [--duration:40s] [--gap:1rem] [gap:var(--gap)]',
         vertical ? 'flex-col' : 'flex-row',
-        $props.class
+        $props.class,
       )
     "
   >
@@ -15,7 +35,7 @@
         cn(
           'flex shrink-0 justify-around [gap:var(--gap)]',
           vertical ? 'animate-marquee-vertical flex-col' : 'animate-marquee flex-row',
-          pauseOnHover ? 'group-hover:[animation-play-state:paused]' : ''
+          pauseOnHover ? 'group-hover:[animation-play-state:paused]' : '',
         )
       "
       :style="{
@@ -26,26 +46,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-import { cn } from "~/lib/utils";
-
-withDefaults(
-  defineProps<{
-    class?: string;
-    reverse?: boolean;
-    pauseOnHover?: boolean;
-    vertical?: boolean;
-    repeat?: number;
-  }>(),
-  {
-    pauseOnHover: false,
-    vertical: false,
-    repeat: 4,
-    class: "",
-  }
-);
-</script>
 
 <style scoped>
 .animate-marquee {

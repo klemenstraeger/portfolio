@@ -1,60 +1,60 @@
 <script setup lang="ts">
 interface Props {
-  words: string[];
-  duration?: number;
-  class?: string;
-  letterClass?: string;
+  words: string[]
+  duration?: number
+  class?: string
+  letterClass?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
   duration: 3000,
   class: "",
   letterClass: "",
-});
-defineEmits(["animationComplete"]);
-const currentWord = ref(props.words[0]);
-const isVisible = ref(true);
-const timeoutId = ref<number | null>(null);
+})
+defineEmits(["animationComplete"])
+const currentWord = ref(props.words[0])
+const isVisible = ref(true)
+const timeoutId = ref<number | null>(null)
 
-const startAnimation = () => {
-  isVisible.value = false;
+function startAnimation() {
+  isVisible.value = false
 
   setTimeout(() => {
-    const currentIndex = props.words.indexOf(currentWord.value);
-    const nextWord = props.words[currentIndex + 1] || props.words[0];
-    currentWord.value = nextWord;
-    isVisible.value = true;
-  }, 600);
-};
+    const currentIndex = props.words.indexOf(currentWord.value)
+    const nextWord = props.words[currentIndex + 1] || props.words[0]
+    currentWord.value = nextWord
+    isVisible.value = true
+  }, 600)
+}
 
 const splitWords = computed(() => {
-  return currentWord.value.split(" ").map((word) => ({
+  return currentWord.value.split(" ").map(word => ({
     word,
     letters: word.split(""),
-  }));
-});
+  }))
+})
 
-const startTimeout = () => {
+function startTimeout() {
   timeoutId.value = window.setTimeout(() => {
-    startAnimation();
-  }, props.duration);
-};
+    startAnimation()
+  }, props.duration)
+}
 
 onMounted(() => {
-  startTimeout();
-});
+  startTimeout()
+})
 
 onBeforeUnmount(() => {
   if (timeoutId.value) {
-    clearTimeout(timeoutId.value);
+    clearTimeout(timeoutId.value)
   }
-});
+})
 
 watch(isVisible, (newValue) => {
   if (newValue) {
-    startTimeout();
+    startTimeout()
   }
-});
+})
 </script>
 
 <template>
@@ -65,8 +65,7 @@ watch(isVisible, (newValue) => {
     >
       <div
         v-show="isVisible"
-        :class="[
-          'relative inline-block text-left text-neutral-900 dark:text-neutral-100 z-10',
+        class="relative inline-block text-left text-neutral-900 dark:text-neutral-100 z-10" :class="[
           props.class,
         ]"
       >
@@ -84,8 +83,8 @@ watch(isVisible, (newValue) => {
             <span
               v-for="(letter, letterIndex) in wordObj.letters"
               :key="wordObj.word + letterIndex"
-              class="inline-block opacity-0"
-              :class="['inline-block opacity-0 ', props.letterClass]"
+              class="inline-block opacity-0 inline-block opacity-0 "
+              :class="[props.letterClass]"
               :style="{
                 animation: `fadeInLetter 0.2s ease forwards`,
                 animationDelay: `${wordIndex * 0.3 + letterIndex * 0.05}s`,
