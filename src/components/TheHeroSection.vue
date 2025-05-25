@@ -57,7 +57,7 @@ const flipWords = ref([
     class="lg:h-[80vh] gap-y-10 mt-12 lg:mt-32 md:grid-cols-2 md:grid mx-4 flex flex-col justify-around lg:min-h-[50vh]"
   >
     <div class="h-fit flex-grow">
-      <div class="text-white font-bold lg:text-4xl xl:text-5xl flex lg:py-2 text-2xl">
+      <div class="dark:text-white font-bold lg:text-4xl xl:text-5xl flex lg:py-2 text-2xl">
         <div class="lg:py-4">
           {{ $t("headline.IAm") }}&nbsp;
         </div>
@@ -69,7 +69,7 @@ const flipWords = ref([
           </div>
         </div>
       </div>
-      <div class="text-white lg:text-2xl text-sm font-normal mt-6 lg:text-left">
+      <div class="dark:text-white lg:text-2xl text-sm font-normal mt-6 lg:text-left">
         {{ $t("intro.intro1", [age]) }}
 
         <span
@@ -80,7 +80,7 @@ const flipWords = ref([
           class="bg-gradient-to-r from-emerald-500 to-lime-600 bg-bottom bg-no-repeat bg-[length:100%_4px] hover:bg-[length:100%_100%] transition-[background-size] w-max"
         >{{ $t("intro.intro4") }}</span>
         {{ $t("intro.intro5") }}
-        <FlipWords
+        <MiscFlipWords
           :words="flipWords"
           letter-class="text-transparent bg-clip-text bg-gradient-to-l from-emerald-500 to-lime-600 font-bold italic"
           :duration="3000"

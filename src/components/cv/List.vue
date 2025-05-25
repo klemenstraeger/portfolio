@@ -55,7 +55,7 @@ onUnmounted(() => {
 
 <template>
   <div id="cv" class="relative">
-    <MeteorBackground class="" />
+    <MiscMeteorBackground class="" />
     <div ref="container" class="text-white">
       <div class="container mx-auto">
         <div class="sticky">

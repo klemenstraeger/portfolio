@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxtjs/i18n",
     "@nuxt/eslint",
+    "@nuxtjs/color-mode",
   ],
 
   i18n: {
@@ -39,12 +40,6 @@ export default defineNuxtConfig({
       alwaysRedirect: false,
     },
   },
-  components: [
-    {
-      pathPrefix: false,
-      path: "~/components",
-    },
-  ],
   devtools: {
     enabled: true,
   },

@@ -4,7 +4,7 @@ defineProps<{ title: string }>()
 
 <template>
   <section>
-    <h3 class="lg:text-5xl text-2xl mx-4 md:mx-0 text-white font-bold mb-4 lg:mb-12">
+    <h3 class="lg:text-5xl text-2xl mx-4 md:mx-0 dark:text-white font-bold mb-4 lg:mb-12">
       {{ title }}
     </h3>
     <slot />

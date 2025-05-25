@@ -48,7 +48,7 @@ const links = [
         <Icon
           :name="link.name"
           :size="!isSm ? '2rem' : '2.5rem'"
-          class="hover:scale-110 transition duration-150 ease-in-out hover:!text-emerald-500 text-white"
+          class="hover:scale-110 transition duration-150 ease-in-out hover:!text-emerald-500 dark:text-white"
         />
       </NuxtLink>
     </div>
@@ -57,7 +57,7 @@ const links = [
       <Icon
         name="tabler:menu"
         size="2rem"
-        class="hover:scale-110 transition duration-150 ease-in-out hover:!text-emerald-500 text-white"
+        class="hover:scale-110 transition duration-150 ease-in-out hover:!text-emerald-500 dark:text-white"
         @click="appStore.drawerOpen = !appStore.drawerOpen"
       />
     </div>

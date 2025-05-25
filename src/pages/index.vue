@@ -4,7 +4,6 @@ const { t } = useI18n()
 useHead({
   title: `klemenstraeger.dev `,
 })
-
 useSeoMeta({
   title: "klemenstraeger.dev",
   ogTitle: "klemenstraeger.dev",
@@ -16,21 +15,20 @@ useSeoMeta({
 
 <template>
   <div class="space-y-14 lg:space-y-0">
-    <HeroSection />
+    <TheHeroSection />
     <div class="flex flex-col gap-y-14 xl:gap-y-20">
-      <Section :title="$t('cv.header')">
-        <CurriculiumVitae />
-      </Section>
-      <Section :title="$t('companies.header')">
-        <Componies />
-      </Section>
-      <Section :title="$t('skillAndTechnologies.header')">
+      <TheSection :title="$t('cv.header')">
+        <CVList />
+      </TheSection>
+      <TheSection :title="$t('companies.header')">
+        <CompaniesList />
+      </TheSection>
+      <TheSection :title="$t('skillAndTechnologies.header')">
         <SkillsAndTechnologies />
-      </Section>
-
-      <Section :title="$t('projects.header')">
-        <TheProjects />
-      </Section>
+      </TheSection>
+      <TheSection :title="$t('projects.header')">
+        <ProjectList />
+      </TheSection>
     </div>
   </div>
 </template>
