@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   future: {
     compatibilityVersion: 4,
+
   },
   modules: [
     "@nuxt/icon",
@@ -19,11 +20,12 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
   ],
 
+
   i18n: {
     locales: [
       {
         file: "de-DE.json",
-        code: "de",
+        code: "en.json",
       },
       {
         code: "en",
@@ -52,7 +54,7 @@ export default defineNuxtConfig({
       standalone: false,
     },
   },
-  css: ["~~/assets/css/main.css"],
+  css: ["~~/app/assets/css/main.css"],
   vite: {
     plugins: [
       tailwindcss(),
