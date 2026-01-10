@@ -5,6 +5,14 @@ const { t } = useI18n()
 
 const skillElements = ref<HTMLElement[]>([])
 
+const setSkillRef = (el: any) => {
+  if (el && el.$el) {
+    skillElements.value.push(el.$el)
+  } else if (el) {
+    skillElements.value.push(el)
+  }
+}
+
 onMounted(() => {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -107,7 +115,7 @@ const skills = [
     <UCard
       v-for="(skill, index) in skills"
       :key="skill.title"
-      ref="skillElements"
+      :ref="setSkillRef"
       class="hover:scale-105 transition-all duration-500 ease-in-out opacity-0 slide-in-element"
       :style="{
         '--slide-delay': `${index * 100}ms`,
