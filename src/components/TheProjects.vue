@@ -69,23 +69,22 @@ const projects = [
       :ui="{ body: { padding: 'p-6 sm:p-8' } }"
     >
       <div class="flex items-center justify-between mb-6">
-        <h3 class="text-2xl lg:text-3xl font-bold text-primary">
+        <h3 class="text-2xl lg:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">
           {{ project.title }}
         </h3>
-        <UButton
+        <NuxtLink
           v-if="project.repo"
           :to="project.repo"
           target="_blank"
-          icon="i-heroicons-code-bracket"
-          variant="ghost"
-          color="neutral"
-          size="lg"
-        />
+          class="transition-all duration-200 hover:scale-110 hover:text-primary-400"
+        >
+          <Icon name="mdi:github" size="2rem" />
+        </NuxtLink>
       </div>
       
       <div class="grid xl:grid-cols-2 gap-8">
         <div class="space-y-6">
-          <p class="text-neutral-300 text-base lg:text-lg leading-relaxed">
+          <p class="text-neutral-300 dark:text-neutral-400 text-base lg:text-lg leading-relaxed">
             {{ project.description }}
           </p>
           

@@ -5,17 +5,17 @@ const appStore = useAppStore()
 
 const links = [
   {
-    icon: "i-heroicons-code-bracket",
+    name: "mdi:github",
     to: "https://github.com/klemenstraeger",
     target: "_blank",
   },
   {
-    icon: "i-heroicons-user-group",
+    name: "mdi:linkedin",
     to: "https://www.linkedin.com/in/klemens-tr%C3%A4ger-003b68198/",
     target: "_blank",
   },
   {
-    icon: "i-heroicons-envelope",
+    name: "ci:mail",
     to: "mailto:contact@klemenstraeger.dev",
     target: "_blank",
   },
@@ -25,31 +25,35 @@ const links = [
 <template>
   <div class="flex justify-between py-8 items-center">
     <NuxtLink to="/">
-      <div class="font-mono font-bold text-xl lg:text-2xl text-primary">
+      <div class="font-mono font-bold text-xl lg:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">
         klemenstraeger.dev
       </div>
     </NuxtLink>
     <div class="gap-4 items-center hidden lg:flex">
-      <UButton
+      <NuxtLink
         v-for="link in links"
-        :key="link.icon"
+        :key="link.name"
         :to="link.to"
         :target="link.target"
-        variant="ghost"
-        color="neutral"
-        :icon="link.icon"
-        size="lg"
-      />
+        class="transition-all duration-200 hover:scale-110 hover:text-primary-400"
+      >
+        <Icon
+          :name="link.name"
+          size="2.5rem"
+        />
+      </NuxtLink>
     </div>
 
     <div class="lg:hidden">
-      <UButton
-        icon="i-heroicons-bars-3"
-        variant="ghost"
-        color="neutral"
-        size="lg"
+      <button
+        class="transition-all duration-200 hover:scale-110 hover:text-primary-400"
         @click="appStore.drawerOpen = !appStore.drawerOpen"
-      />
+      >
+        <Icon
+          name="tabler:menu"
+          size="2rem"
+        />
+      </button>
     </div>
   </div>
 </template>

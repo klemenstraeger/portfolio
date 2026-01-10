@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxt/ui",
+    "@nuxt/icon",
     "@nuxt/image",
     "@vueuse/nuxt",
     "@nuxtjs/robots",

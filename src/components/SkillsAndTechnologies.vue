@@ -39,70 +39,70 @@ onMounted(() => {
 const skills = [
   {
     title: t("skillAndTechnologies.skills.entry1.title"),
-    icon: "i-heroicons-code-bracket",
+    icon: "logos:vue",
     text: t("skillAndTechnologies.skills.entry1.text"),
     color: "primary",
     skillLevel: 80,
   },
   {
     title: t("skillAndTechnologies.skills.entry2.title"),
-    icon: "i-heroicons-sparkles",
+    icon: "logos:nuxt-icon",
     text: t("skillAndTechnologies.skills.entry2.text"),
     color: "primary",
     skillLevel: 70,
   },
   {
     title: t("skillAndTechnologies.skills.entry3.title"),
-    icon: "i-heroicons-swatch",
+    icon: "logos:tailwindcss-icon",
     text: t("skillAndTechnologies.skills.entry3.text"),
     color: "cyan",
     skillLevel: 50,
   },
   {
     title: t("skillAndTechnologies.skills.entry4.title"),
-    icon: "i-heroicons-code-bracket-square",
+    icon: "logos:typescript-icon",
     text: t("skillAndTechnologies.skills.entry4.text"),
     color: "blue",
     skillLevel: 70,
   },
   {
     title: t("skillAndTechnologies.skills.entry10.title"),
-    icon: "i-heroicons-command-line",
+    icon: "logos:python",
     text: t("skillAndTechnologies.skills.entry10.text"),
     color: "blue",
     skillLevel: 70,
   },
   {
     title: t("skillAndTechnologies.skills.entry5.title"),
-    icon: "i-heroicons-cube",
+    icon: "logos:docker-icon",
     text: t("skillAndTechnologies.skills.entry6.text"),
     color: "blue",
     skillLevel: 50,
   },
   {
     title: t("skillAndTechnologies.skills.entry7.title"),
-    icon: "i-heroicons-server",
+    icon: "logos:nodejs-icon",
     text: t("skillAndTechnologies.skills.entry7.text"),
     color: "green",
     skillLevel: 50,
   },
   {
     title: t("skillAndTechnologies.skills.entry8.title"),
-    icon: "i-heroicons-circle-stack",
+    icon: "logos:postgresql",
     text: t("skillAndTechnologies.skills.entry8.text"),
     color: "blue",
     skillLevel: 50,
   },
   {
     title: t("skillAndTechnologies.skills.entry9.title"),
-    icon: "i-heroicons-cloud",
+    icon: "logos:google-cloud",
     text: t("skillAndTechnologies.skills.entry9.text"),
     color: "blue",
     skillLevel: 50,
   },
   {
     title: "Git",
-    icon: "i-heroicons-document-duplicate",
+    icon: "mdi:git",
     text: "Basic knowledge in Git and Github",
     color: "orange",
     skillLevel: 40,
@@ -125,16 +125,16 @@ const skills = [
       }"
     >
       <div class="flex items-center gap-4 mb-4">
-        <UIcon
+        <Icon
           :name="skill.icon"
-          class="w-12 h-12 text-primary"
+          size="3rem"
         />
         <h3 class="text-xl lg:text-2xl font-bold">
           {{ skill.title }}
         </h3>
       </div>
       
-      <p class="text-neutral-300">
+      <p class="text-neutral-300 dark:text-neutral-400">
         {{ skill.text }}
       </p>
     </UCard>
