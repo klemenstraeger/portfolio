@@ -134,7 +134,7 @@ const skills = [
         </h3>
       </div>
       
-      <p class="text-gray-300">
+      <p class="text-neutral-300">
         {{ skill.text }}
       </p>
     </UCard>

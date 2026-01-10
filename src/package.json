@@ -11,7 +11,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@nuxt/ui": "^2.20.0",
+    "@nuxt/ui": "^3.0.0",
     "@nuxtjs/robots": "^5.2.10",
     "@pinia/nuxt": "^0.11.0",
     "@vercel/analytics": "^1.5.0",

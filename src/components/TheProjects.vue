@@ -78,14 +78,14 @@ const projects = [
           target="_blank"
           icon="i-heroicons-code-bracket"
           variant="ghost"
-          color="gray"
+          color="neutral"
           size="lg"
         />
       </div>
       
       <div class="grid xl:grid-cols-2 gap-8">
         <div class="space-y-6">
-          <p class="text-gray-300 text-base lg:text-lg leading-relaxed">
+          <p class="text-neutral-300 text-base lg:text-lg leading-relaxed">
             {{ project.description }}
           </p>
           

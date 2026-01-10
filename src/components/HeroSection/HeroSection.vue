@@ -47,7 +47,7 @@ const flipWords = ref([
         </div>
       </div>
       
-      <div class="text-lg lg:text-xl text-gray-300 leading-relaxed">
+      <div class="text-lg lg:text-xl text-neutral-300 leading-relaxed">
         {{ $t("intro.intro1", [age]) }}
         <span class="text-primary font-semibold">{{ $t("intro.intro2") }}</span>
         {{ $t("intro.intro3") }}

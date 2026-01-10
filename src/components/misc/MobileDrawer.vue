@@ -36,14 +36,14 @@ const links = [
 
 <template>
   <USlideover v-model="drawerOpen" side="right">
-    <UCard class="flex flex-col flex-1" :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
+    <UCard class="flex flex-col flex-1" :ui="{ body: { base: 'flex-1' }, ring: '', divide: 'divide-y divide-neutral-100 dark:divide-neutral-800' }">
       <template #header>
         <div class="flex items-center justify-between">
           <h3 class="text-xl font-bold text-primary">
             klemenstraeger.dev
           </h3>
           <UButton
-            color="gray"
+            color="neutral"
             variant="ghost"
             icon="i-heroicons-x-mark"
             @click="drawerOpen = false"

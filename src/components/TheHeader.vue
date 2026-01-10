@@ -36,7 +36,7 @@ const links = [
         :to="link.to"
         :target="link.target"
         variant="ghost"
-        color="gray"
+        color="neutral"
         :icon="link.icon"
         size="lg"
       />
@@ -46,7 +46,7 @@ const links = [
       <UButton
         icon="i-heroicons-bars-3"
         variant="ghost"
-        color="gray"
+        color="neutral"
         size="lg"
         @click="appStore.drawerOpen = !appStore.drawerOpen"
       />

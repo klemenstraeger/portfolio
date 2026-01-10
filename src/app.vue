@@ -5,9 +5,9 @@ colorMode.preference = 'dark'
 </script>
 
 <template>
-  <div>
+  <UApp>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-  </div>
+  </UApp>
 </template>
