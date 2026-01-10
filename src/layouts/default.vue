@@ -4,8 +4,8 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt"
 
 <template>
   <div>
+    <MobileDrawer />
     <UContainer class="pt-10">
-      <MobileDrawer />
       <SpeedInsights />
       <TheHeader />
       <slot />
