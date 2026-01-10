@@ -15,23 +15,40 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="space-y-14 lg:space-y-0">
+  <div class="space-y-14 lg:space-y-20 py-8">
     <HeroSection />
-    <div class="flex flex-col gap-y-14 xl:gap-y-20">
-      <Section :title="$t('cv.header')">
-        <CurriculiumVitae />
-      </Section>
-      <Section :title="$t('companies.header')">
-        <Componies />
-      </Section>
-      <Section :title="$t('skillAndTechnologies.header')">
-        <SkillsAndTechnologies />
-      </Section>
+    
+    <UContainer>
+      <div class="space-y-20">
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-bold mb-8 text-primary">
+            {{ $t('cv.header') }}
+          </h2>
+          <CurriculiumVitae />
+        </div>
+        
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-bold mb-8 text-primary">
+            {{ $t('companies.header') }}
+          </h2>
+          <Componies />
+        </div>
+        
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-bold mb-8 text-primary">
+            {{ $t('skillAndTechnologies.header') }}
+          </h2>
+          <SkillsAndTechnologies />
+        </div>
 
-      <Section :title="$t('projects.header')">
-        <TheProjects />
-      </Section>
-    </div>
+        <div>
+          <h2 class="text-3xl lg:text-4xl font-bold mb-8 text-primary">
+            {{ $t('projects.header') }}
+          </h2>
+          <TheProjects />
+        </div>
+      </div>
+    </UContainer>
   </div>
 </template>
 

@@ -1,16 +1,13 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="text-white flex py-24 justify-center flex-col items-center gap-4">
-    <div>Klemens Träger🪄 Dresden, {{ new Date().getFullYear() }}</div>
+  <div class="flex py-24 justify-center flex-col items-center gap-4 text-gray-400">
+    <div>Klemens Träger 🪄 Dresden, {{ new Date().getFullYear() }}</div>
 
-    <NuxtLink href="https://nuxt.com/" target="_blank">
-      build with
-      <Icon name="logos:nuxt-icon" />
+    <NuxtLink href="https://nuxt.com/" target="_blank" class="flex items-center gap-2 hover:text-primary transition-colors">
+      <span>built with</span>
+      <UIcon name="i-heroicons-sparkles" class="w-5 h-5" />
+      <span>Nuxt</span>
     </NuxtLink>
-
-    <div class="text-white flex justify-center" />
   </div>
 </template>
-
-<style scoped></style>

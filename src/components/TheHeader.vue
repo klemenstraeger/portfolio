@@ -1,28 +1,21 @@
 <script setup lang="ts">
 import { useAppStore } from "~/stores/app-store"
 
-const isSm = useMediaQuery("(min-width: 640px)")
-
 const appStore = useAppStore()
 
 const links = [
-  // {
-  //   name: "ic:outline-article",
-  //   to: "/blog",
-  //   target: "",
-  // },
   {
-    name: "mdi:github",
+    icon: "i-heroicons-code-bracket",
     to: "https://github.com/klemenstraeger",
     target: "_blank",
   },
   {
-    name: "mdi:linkedin",
+    icon: "i-heroicons-user-group",
     to: "https://www.linkedin.com/in/klemens-tr%C3%A4ger-003b68198/",
     target: "_blank",
   },
   {
-    name: "ci:mail",
+    icon: "i-heroicons-envelope",
     to: "mailto:contact@klemenstraeger.dev",
     target: "_blank",
   },
@@ -30,38 +23,33 @@ const links = [
 </script>
 
 <template>
-  <div class="flex justify-between lg:py-12 py-4 mx-4 lg:mx-0 items-center">
+  <div class="flex justify-between py-8 items-center">
     <NuxtLink to="/">
-      <div
-        class="font-mono lg:font-semibold font-bold lg:text-4xl text-transparent text-base bg-clip-text bg-gradient-to-r from-emerald-500 to-lime-600 py-2"
-      >
+      <div class="font-mono font-bold text-xl lg:text-2xl text-primary">
         klemenstraeger.dev
       </div>
     </NuxtLink>
-    <div class="lg:gap-6 gap-2 items-center hidden lg:flex">
-      <NuxtLink
+    <div class="gap-4 items-center hidden lg:flex">
+      <UButton
         v-for="link in links"
-        :key="link.name"
+        :key="link.icon"
         :to="link.to"
         :target="link.target"
-      >
-        <Icon
-          :name="link.name"
-          :size="!isSm ? '2rem' : '2.5rem'"
-          class="hover:scale-110 transition duration-150 ease-in-out hover:!text-emerald-500 text-white"
-        />
-      </NuxtLink>
+        variant="ghost"
+        color="gray"
+        :icon="link.icon"
+        size="lg"
+      />
     </div>
 
     <div class="lg:hidden">
-      <Icon
-        name="tabler:menu"
-        size="2rem"
-        class="hover:scale-110 transition duration-150 ease-in-out hover:!text-emerald-500 text-white"
+      <UButton
+        icon="i-heroicons-bars-3"
+        variant="ghost"
+        color="gray"
+        size="lg"
         @click="appStore.drawerOpen = !appStore.drawerOpen"
       />
     </div>
   </div>
 </template>
-
-<style scoped></style>
