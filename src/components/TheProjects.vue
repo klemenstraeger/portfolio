@@ -195,52 +195,61 @@ const projects = [
       <div
         v-for="(project, index) in projects"
         :key="index"
-        class="relative block rounded-lg p-4 sm:p-6 lg:p-8 bg-slate-900"
+        class="group relative block rounded-2xl p-6 sm:p-8 lg:p-10 bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-500/20 hover:scale-[1.02] overflow-hidden"
       >
-        <div class="flex items-center justify-between">
-          <h1 class="text-emerald-500 text-xl md:text-3xl font-extrabold">
-            {{ project.title }}
-          </h1>
-          <NuxtLink v-if="project.repo" :href="project.repo" target="_blank">
-            <Icon class="text-white text-3xl" name="mdi:github" />
-          </NuxtLink>
-        </div>
-        <div class="grid xl:grid-cols-2 xl:grid-rows-2 xl:gap-x-12">
-          <div class="w-full space-y-4 lg:row-start-1">
-            <p class="text-white mt-4 font-normal text-sm md:text-base text-left">
-              {{ project.description }}
-            </p>
+        <!-- Animated background gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-lime-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        
+        <!-- Content -->
+        <div class="relative z-10">
+          <div class="flex items-center justify-between mb-6">
+            <h1 class="text-emerald-400 text-xl md:text-3xl font-bold group-hover:text-emerald-300 transition-colors duration-300">
+              {{ project.title }}
+            </h1>
+            <NuxtLink v-if="project.repo" :href="project.repo" target="_blank">
+              <Icon class="text-white text-3xl hover:text-emerald-400 hover:scale-110 transition-all duration-300" name="mdi:github" />
+            </NuxtLink>
           </div>
-          <n-carousel
-            dot-placement="bottom"
-            draggable
-            autoplay
-            :show-dots="false"
-            :interval="index * 1000 + 5000"
-            class="rounded-md img-carousel lg:row-span-2 xl:col-start-2"
-            keyboard
-          >
-            <nuxt-img
-              v-for="img in project.images"
-              :key="img"
-              :alt="project.title"
-              format="webp"
-              loading="lazy"
-              quality="100"
-              class="mt-4 rounded-md !w-full md:h-[400px] object-contain xl:object-scale-down"
-              :src="img"
-            />
-          </n-carousel>
-          <div class="flex flex-wrap md:gap-3 mt-4 xl:row-start-2 h-fit justify-self-end">
-            <Tag
-              v-for="technologie in project.usedTechnologies"
-              :key="technologie.name"
-              :icon="technologie.icon"
-              :border-color="technologie.color"
-              class="h-fit"
+          
+          <div class="grid xl:grid-cols-2 xl:grid-rows-2 xl:gap-x-12 gap-y-6">
+            <div class="w-full space-y-4 lg:row-start-1">
+              <p class="text-white/80 font-light text-sm md:text-base text-left leading-relaxed">
+                {{ project.description }}
+              </p>
+            </div>
+            
+            <n-carousel
+              dot-placement="bottom"
+              draggable
+              autoplay
+              :show-dots="false"
+              :interval="index * 1000 + 5000"
+              class="rounded-xl img-carousel lg:row-span-2 xl:col-start-2 overflow-hidden shadow-xl group-hover:shadow-2xl transition-shadow duration-500"
+              keyboard
             >
-              {{ technologie.name }}
-            </Tag>
+              <nuxt-img
+                v-for="img in project.images"
+                :key="img"
+                :alt="project.title"
+                format="webp"
+                loading="lazy"
+                quality="100"
+                class="mt-4 rounded-xl !w-full md:h-[400px] object-contain xl:object-scale-down hover:scale-105 transition-transform duration-500"
+                :src="img"
+              />
+            </n-carousel>
+            
+            <div class="flex flex-wrap md:gap-3 gap-2 mt-4 xl:row-start-2 h-fit justify-self-end">
+              <Tag
+                v-for="technologie in project.usedTechnologies"
+                :key="technologie.name"
+                :icon="technologie.icon"
+                :border-color="technologie.color"
+                class="h-fit hover:scale-110 transition-transform duration-300"
+              >
+                {{ technologie.name }}
+              </Tag>
+            </div>
           </div>
         </div>
       </div>

@@ -109,29 +109,55 @@ const skills = [
         v-for="(skill, index) in skills"
         :key="skill.title"
         ref="skillElements"
-        class="relative block border-r-slate-800 border-b-slate-800 border border-l-slate-800 rounded-b-lg border-t-4 p-4 sm:p-6 lg:p-8 bg-slate-900 hover:scale-105 transition-transform duration-500 ease-in-out opacity-0 slide-in-element"
-        :class="[`border-${skill.color}`]"
+        class="group relative block border-slate-700/50 border rounded-2xl p-6 sm:p-7 lg:p-8 bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-sm hover:scale-[1.05] hover:shadow-2xl transition-all duration-500 ease-out opacity-0 slide-in-element overflow-hidden"
+        :class="[`hover:shadow-${skill.color}`]"
         :style="{
           '--slide-delay': `${index * 100}ms`,
+          borderTopWidth: '3px',
+          borderTopColor: `var(--tw-gradient-from)`,
         }"
       >
-        <div class="gap-4">
-          <h3
-            class="lg:text-3xl text-lg font-bold text-white sm:text-4xl flex items-center"
-          >
+        <!-- Animated gradient border top -->
+        <div 
+          class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          :class="[`from-${skill.color}`, `to-${skill.color}/50`]"
+        />
+        
+        <!-- Subtle background glow on hover -->
+        <div 
+          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"
+          :class="[`bg-${skill.color}/10`]"
+        />
+        
+        <div class="relative z-10 gap-4">
+          <div class="flex items-center mb-4">
             <Icon
               :name="skill.icon"
               color="white"
               size="3rem"
-              class="hover:scale-110 transition duration-150 ease-in-out mr-4"
+              class="group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 ease-out mr-4"
             />
-            {{ skill.title }}
-          </h3>
+            <h3 class="text-2xl lg:text-3xl font-bold text-white">
+              {{ skill.title }}
+            </h3>
+          </div>
         </div>
 
-        <p class="my-2 font-medium text-white">
+        <p class="relative z-10 mt-3 font-light text-white/80 text-sm leading-relaxed">
           {{ skill.text }}
         </p>
+        
+        <!-- Skill level indicator (optional visual) -->
+        <div class="relative z-10 mt-4 w-full h-1.5 bg-slate-700/30 rounded-full overflow-hidden">
+          <div 
+            class="h-full rounded-full transition-all duration-1000 ease-out bg-gradient-to-r"
+            :class="[`from-${skill.color}`, `to-${skill.color}/70`, 'group-hover:shadow-lg']"
+            :style="{ 
+              width: `${skill.skillLevel}%`,
+              transitionDelay: `${index * 50}ms`
+            }"
+          />
+        </div>
       </div>
     </div>
   </div>
