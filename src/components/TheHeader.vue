@@ -35,7 +35,7 @@ const links = [
         :key="link.name"
         :to="link.to"
         :target="link.target"
-        class="transition-all duration-200 hover:scale-110 hover:text-primary-400"
+        class="text-neutral-700 dark:text-neutral-300 transition-all duration-200 hover:scale-110 hover:text-primary-400"
       >
         <Icon
           :name="link.name"
@@ -46,7 +46,7 @@ const links = [
 
     <div class="lg:hidden">
       <button
-        class="transition-all duration-200 hover:scale-110 hover:text-primary-400"
+        class="text-neutral-700 dark:text-neutral-300 transition-all duration-200 hover:scale-110 hover:text-primary-400"
         @click="appStore.drawerOpen = !appStore.drawerOpen"
       >
         <Icon

@@ -51,7 +51,7 @@ const links = [
             klemenstraeger.dev
           </h3>
           <button
-            class="transition-all duration-200 hover:scale-110 hover:text-primary-400"
+            class="text-neutral-700 dark:text-neutral-300 transition-all duration-200 hover:scale-110 hover:text-primary-400"
             @click="drawerOpen = false"
           >
             <Icon name="mdi:close" size="1.5rem" />
@@ -69,7 +69,7 @@ const links = [
           @click="drawerOpen = false"
         >
           <Icon :name="link.name" size="1.5rem" class="text-primary-500" />
-          <span class="text-lg font-medium">{{ link.title }}</span>
+          <span class="text-lg font-medium text-neutral-900 dark:text-white">{{ link.title }}</span>
         </NuxtLink>
       </div>
     </UCard>

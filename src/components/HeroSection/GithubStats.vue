@@ -48,7 +48,7 @@ const stats = computed(() => {
     <div
       v-for="(stat, index) in stats"
       :key="index"
-      class="bg-slate-900 border border-[#30363d] rounded-lg p-4 relative hover:scale-105 transition-all duration-300 ease-in-out"
+      class="bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 relative hover:scale-105 transition-all duration-300 ease-in-out"
       @mouseenter="stat.isHovered = true"
       @mouseleave="stat.isHovered = false"
     >
@@ -62,7 +62,7 @@ const stats = computed(() => {
         :color-to="colors.lime[600]"
       />
       <div class="flex items-center justify-between pb-2">
-        <h3 class="text-sm font-medium text-gray-300">
+        <h3 class="text-sm font-medium text-neutral-600 dark:text-neutral-300">
           {{ stat.title }}
         </h3>
         <component :is="stat.icon" class="h-4 w-4" :class="stat.iconColor" />
@@ -75,7 +75,7 @@ const stats = computed(() => {
           :value="stat.value"
         />
       </div>
-      <p class="text-xs text-gray-400">
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
         {{ stat.description }}
       </p>
     </div>
