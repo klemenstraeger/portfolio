@@ -63,11 +63,11 @@ onUnmounted(() => {
             <div class="relative wrap overflow-hidden h-full px-4 md:px-0">
               <!-- Beam container -->
               <div
-                class="absolute inset-y-0 left-1/2 w-px bg-emerald-500/20 transform -translate-x-1/2 z-10"
+                class="absolute inset-y-0 left-1/2 w-px bg-primary-200 dark:bg-primary-500/20 transform -translate-x-1/2 z-10"
               >
                 <div
                   ref="beam"
-                  class="absolute inset-x-0 top-0 bg-emerald-500 transition-all duration-300 ease-out glow-beam"
+                  class="absolute inset-x-0 top-0 bg-primary-500 transition-all duration-300 ease-out glow-beam"
                 />
               </div>
 

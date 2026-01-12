@@ -13,12 +13,6 @@ watch(drawerOpen, (value) => {
 })
 
 const links = [
-  //   {
-  //     name: "ic:outline-article",
-  //     to: "/blog",
-  //     target: "",
-  //     title: "Blog",
-  //   },
   {
     name: "mdi:github",
     to: "https://github.com/klemenstraeger",
@@ -41,52 +35,43 @@ const links = [
 </script>
 
 <template>
-  <div v-show="drawerOpen" class="fixed inset-0 z-50 backdrop-blur-sm" />
-
-  <!-- drawer component -->
-  <div
-    id="drawer-right-example"
-    class="fixed top-0 right-0 z-50 h-screen overflow-y-auto transition-transform w-80 bg-gray-800 flex flex-col justify-center border-l border-emerald-500"
-    tabindex="-1"
-    aria-labelledby="drawer-right-label"
-    :class="{
-      'translate-x-100': drawerOpen,
-      'translate-x-full': !drawerOpen,
-    }"
-  >
-    <Icon
-      name="mdi:close"
-      size="24"
-      class="absolute text-white top-4 right-4 cursor-pointer"
-      @click="drawerOpen = false"
-    />
-    <div
-      class="font-mono lg:font-semibold font-bold lg:text-4xl text-transparent text-lg bg-clip-text bg-gradient-to-r from-emerald-500 to-lime-600 py-2 absolute top-2 left-4"
+  <USlideover v-model="drawerOpen" side="right">
+    <UCard 
+      class="flex flex-col flex-1" 
+      :ui="{ 
+        body: { base: 'flex-1' }, 
+        ring: '', 
+        divide: 'divide-y divide-neutral-100 dark:divide-neutral-800',
+        background: 'bg-white dark:bg-neutral-900'
+      }"
     >
-      klemenstraeger.dev
-    </div>
-    <div class="flex flex-col mt-24">
-      <div
-        v-for="link in links"
-        :key="link.name"
-        class="bg-gray-900 py-8 px-4 w-full text-3xl flex border-y border-emerald-500"
-      >
+      <template #header>
+        <div class="flex items-center justify-between">
+          <h3 class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">
+            klemenstraeger.dev
+          </h3>
+          <button
+            class="text-neutral-700 dark:text-neutral-300 transition-all duration-200 hover:scale-110 hover:text-primary-400"
+            @click="drawerOpen = false"
+          >
+            <Icon name="mdi:close" size="1.5rem" />
+          </button>
+        </div>
+      </template>
+
+      <div class="flex flex-col gap-4 p-4">
         <NuxtLink
+          v-for="link in links"
+          :key="link.name"
           :to="link.to"
           :target="link.target"
-          class="text-white flex items-center gap-2"
+          class="flex items-center gap-4 p-4 rounded-lg bg-primary-50 dark:bg-primary-900/20 hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-all duration-200 hover:scale-[1.02]"
           @click="drawerOpen = false"
         >
-          <Icon
-            :name="link.name"
-            size="24"
-            class="hover:scale-110 transition duration-150 ease-in-out hover:!text-emerald-500 text-white text-left"
-          />
-          <div>{{ link.title }}</div>
+          <Icon :name="link.name" size="1.5rem" class="text-primary-500" />
+          <span class="text-lg font-medium text-neutral-900 dark:text-white">{{ link.title }}</span>
         </NuxtLink>
       </div>
-    </div>
-  </div>
+    </UCard>
+  </USlideover>
 </template>
-
-<style scoped></style>

@@ -1,5 +1,3 @@
-import tailwindcss from "@tailwindcss/vite"
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
@@ -7,12 +5,11 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   modules: [
+    "@nuxt/ui",
     "@nuxt/icon",
+    "@nuxt/image",
     "@vueuse/nuxt",
-    "@bg-dev/nuxt-naiveui",
-    "@nuxt/image-edge",
     "@nuxtjs/robots",
-    "nuxt-headlessui",
     "@pinia/nuxt",
     "@nuxtjs/i18n",
     "@nuxt/eslint",
@@ -27,9 +24,7 @@ export default defineNuxtConfig({
       {
         code: "en",
         file: "en.json",
-
       },
-
     ],
     strategy: "no_prefix",
     detectBrowserLanguage: {
@@ -57,10 +52,5 @@ export default defineNuxtConfig({
       standalone: false,
     },
   },
-  css: ["~~/assets/css/main.css"],
-  vite: {
-    plugins: [
-      tailwindcss(),
-    ],
-  },
+  css: ["~/assets/css/main.css"],
 })
